@@ -1149,16 +1149,17 @@ header {
     .get-started-header h1 {
         font-size: 2.3em;
     }
+
     .signup-card {
         max-width: 420px;
         padding: 32px 28px;
     }
+
     .social-btn {
         font-size: 0.95em;
     }
 
     /* ---- Landing page ---- */
-
     #start-link {
         display: flex;
         flex-direction: column;
@@ -1191,7 +1192,7 @@ header {
     }
 
     .dated-recent-lessons:last-of-type {
-        margin-bottom: 40px; /* no longer needs to clear a fixed bottom nav */
+        margin-bottom: 40px; 
     }
 
     /* ---- Sidebar takes over ---- */
@@ -1225,7 +1226,8 @@ header {
     /* ---- Desktop search topbar ---- */
     .topbar-desktop {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between; 
+        align-items: center;
         padding: 28px 40px 0;
     }
 
@@ -1240,9 +1242,9 @@ header {
         padding-top: 24px;
     }
 
-    /* ---- Main functions: 4-column grid ---- */
+    /* ---- Main functions: Hide on Desktop ---- */
     .functions {
-        grid-template-columns: repeat(4, 1fr);
+        display: none; 
     }
 
     /* ---- Lessons to discover: 4-column grid ---- */
@@ -1250,16 +1252,28 @@ header {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    /* ---- Recent lessons: flexible grid, more cards per row ---- */
+    .category-card p {
+            font-size: 1.15em; 
+        }
+
+    /* ---- Recent lessons: flexible grid, larger cards, even heights ---- */
     .dated-recent-lessons {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+        align-items: stretch; 
     }
 
     .recent-card {
-        height: 240px;
+        height: 100%; 
+        min-height: 340px; 
+        padding: 16px;
+        justify-content: space-between; 
     }
 
+    /* ---- Uniform thumbnail sizes ---- */
     .recent-card .recent-img {
-        max-height: 110px;
+        height: 180px; 
+        width: 100%;
+        object-fit: cover; 
+        border-radius: 4%; 
     }
 }
