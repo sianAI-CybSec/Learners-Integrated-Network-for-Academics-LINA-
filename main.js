@@ -9,11 +9,16 @@
     -->
 */
 
+document.addEventListener('DOMContentLoaded', () => {
+    setupLogin();
+    setupSignup();
+});
+
 /* ============================================
     LOGIN FORM
 ============================================= */
-
-document.addEventListener('DOMContentLoaded', () => {
+    
+function setupLogin() {
     const loginForm = document.getElementById('login-form');
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
@@ -28,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Student login credentials
     const validUser = "Tolits";
     const validEmail = "linakoTatamarin@gmail.com"
-    const validPass = "uno1saiwebpls";
+    const validPass = "uno1saiwebpls_";
    
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {
@@ -40,10 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if ((enteredValue === validUser || enteredValue === validEmail) && enteredPass === validPass) {
                 const displayName = (enteredValue === validEmail) ? validUser : enteredValue;
                 localStorage.setItem('linaUsername', displayName);
+
+                alert("Login successfully! Welcome back, " + displayName + ".");
                 window.location.href = "home.html";
             }
             else {
-                alert("Invalid username/email or password!");
+                alert("LOGIN FAILED: Invalid username/email or password. Please try again.");
             }
         });
     }
@@ -103,7 +110,65 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedUser && usernameDisplay) {
         usernameDisplay.textContent = savedUser;
     }
-});
+}
 
+/* ============================================
+    SIGNUP FORM
+============================================= */
 
+function setupSignup() {
+    const signupForm = document.getElementById('get-started-form');
+    if(!signupForm) return;
 
+    const firstName = document.getElementById('first-name');
+    const lastName = document.getElementById('last-name');
+    const email = document.getElementById('email');
+    const username = document.getElementById('username');
+    const password = document.getElementById('enter-password')
+    const confirmPassword = document.getElementById('confirm-password');     
+    const togglePassBtn = document.getElementById('toggle-pass');
+    const toggleConfirmBtn = document.getElementById('toggle-confirm-pass');
+    
+    function wireToggle(btn, input) {
+            if (!btn || !input) return;
+            btn.addEventListener('click', () => {
+                const icon = btn.querySelector('i');
+                const willShow = input.type === 'password';
+                input.type = willShow ? 'text' : 'password';
+                if (icon) {
+                    icon.classList.toggle('fa-eye', willShow);
+                    icon.classList.toggle('fa-eye-slash', !willShow);
+                }
+                const label = willShow ? 'Hide password' : 'Show password';
+                btn.setAttribute('aria-label', label);
+                btn.setAttribute('title', label);
+            });
+        }
+
+        wireToggle(togglePassBtn, password);
+        wireToggle(toggleConfirmBtn, confirmPassword);
+
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (!firstName.value.trim() || !email.value.trim() || !username.value.trim() || !password.value.trim()) {
+                alert("SIGNUP FAILED: Please fill out all required fields.");
+                return;
+            }
+
+            if (password.value !== confirmPassword.value) {
+                alert("SIGNUP FAILED: Passwords do not match.");
+                return;
+            }
+
+            localStorage.setItem('signupFirstName', firstName.value.trim());
+            localStorage.setItem('signupLastName', lastName.value.trim());
+            localStorage.setItem('signupEmail', email.value.trim());
+            localStorage.setItem('signupUsername', username.value.trim());
+            localStorage.setItem('signupPassword', password.value);
+            localStorage.setItem('linaUsername', username.value.trim());
+
+            alert("Account created successfully! Welcome, " + username.value.trim() + ".");
+            window.location.href = "home.html";
+        });
+    }
