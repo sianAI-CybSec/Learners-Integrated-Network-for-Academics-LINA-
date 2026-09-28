@@ -1252,11 +1252,12 @@ header {
 
     /* ---- Recent lessons: flexible grid, more cards per row ---- */
     .dated-recent-lessons {
+        width: 100%;
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
 
     .recent-card-link{
-        width: 20vw;
+        width: 12vw;
     }
 
     .recent-card {
