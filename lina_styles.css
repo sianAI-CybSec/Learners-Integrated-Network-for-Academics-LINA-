@@ -699,6 +699,13 @@ header {
     flex-direction: column;
 }
 
+/* Date labels above each group of recent lessons */
+.recent-lessons .date {
+    font-size: 0.95em;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
 .dated-recent-lessons {
     padding: 12px 0;
     display: flex;
@@ -1111,30 +1118,37 @@ header {
         max-width: 56px;
     }
 
-    /* ---- Recent lessons: 2-column grid per date group ---- */
+    /* ---- Recent lessons: 3-column grid per date group ---- */
     .recent-lessons {
         padding: 0 20px;
     }
 
     .dated-recent-lessons {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 14px;
         padding: 16px 0;
-        overflow-x: visible;
-        overflow-y: visible;
+        overflow: visible;
     }
 
     .recent-card-link {
         width: 100%;
+        min-width: 0;
     }
 
     .recent-card {
-        height: 280px;
+        height: 100%;          /* equal-height cards, sized by content */
+        justify-content: flex-start;
+        gap: 8px;
     }
 
     .recent-card .recent-img {
-        max-height: 130px;
+        height: 130px;
+        max-height: none;
+    }
+
+    .rating .rating-star {
+        width: 16px;
     }
 }
 
@@ -1250,22 +1264,24 @@ header {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    /* ---- Recent lessons: flexible grid, more cards per row ---- */
+    /* ---- Recent lessons: auto-fitting grid ---- */
     .dated-recent-lessons {
-        width: 100%;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
     }
 
-    .recent-card-link{
-        width: 12vw;
+    .recent-card-link {
+        width: 100%;
     }
 
     .recent-card {
-        width: 100%
-        height: 30vh;
+        width: 100%;
+        height: 100%;
     }
 
     .recent-card .recent-img {
-        max-height: 200px;
+        height: 150px;
+        max-height: none;
     }
 }
