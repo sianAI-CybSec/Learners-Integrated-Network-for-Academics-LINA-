@@ -1256,10 +1256,11 @@ header {
     }
 
     .recent-card {
-        height: 240px;
+        width: 40%
+        height: 30vh;
     }
 
     .recent-card .recent-img {
-        max-height: 110px;
+        max-height: 200px;
     }
 }
