@@ -145,10 +145,9 @@
                         <legend id="upload-legend">Upload File</legend>
                         <div class="file-upload-wrapper">
                             <!-- Hidden -->
-                            <input type="file" id="file-upload" class="file-input" />
+                            <input type="file" id="file-upload" class="file-input" accept=".pdf, .doc, .docx, application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
                             
                             <div class="file-upload-label">
-                                <!-- Custom Styled Label -->
                                 <label for="file-upload" class="custom-file-upload">
                                     <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="12" cy="12" r="10"></circle>
@@ -192,7 +191,7 @@
                         <label for="tags" id="tags-label">
                             <span>Tags</span>
                             <select name="tags" id="tags" multiple required>
-                                <option value="" disabled>Select Field Tags</option>
+                                <option value="" disabled hidden>Select Field Tags</option>
                                 <option value="computer-science">Computer Science</option>
                                 <option value="cybersecurity">Cybersecurity</option>
                                 <option value="web-development">Web Development</option>
