@@ -54,8 +54,25 @@ a {
 }
 
 /*===============================
-  LESSON PAGE HEADING
+  UPLOAD PAGE HEADING
 ===============================*/ 
+.topbar-mobile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topbar-mobile h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-left: 1rem;
+}
+
+.topbar-mobile #back{
+    object-fit: cover;
+    width: 36px;
+}
 
 @media (min-width: 1024px){
     .topbar-desktop{
@@ -65,9 +82,9 @@ a {
     }
 
     .topbar-desktop h3{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 700;
-        color: var(--primary-red1);
+        color: var(--text-black);
         margin-right: 1rem;
     }
 }
