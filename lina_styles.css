@@ -1239,8 +1239,15 @@ header {
     /* ---- Desktop search topbar ---- */
     .topbar-desktop {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         padding: 28px 40px 0;
+    }
+
+    #home-h3{
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--text-black);
+        margin-right: 1rem;
     }
 
     /* ---- Content area spacing ---- */
