@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LINA Upload Materials</title>
+    <title>LINA Upload</title>
     <!--
     CARANTO, CRISIANE JOSEF A.
     MANGALIMAN, ROLAIGNE E.
@@ -18,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dongle&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lina_styles.css">
     <link rel="stylesheet" href="upload_material_styles.css">
-
 </head>
 <body>
     <div class="app-shell">
@@ -27,7 +26,7 @@
              DESKTOP NAVBAR
         ============================================= -->
         <aside class="sidebar">
-            <a href="index.html" class="sidebar-logo">
+            <a href="home.html" class="sidebar-logo">
                 <img src="graphics/lina_logo.png" alt="LINA Logo" id="logo">
                 <img src="graphics/LINA.png" alt="LINA" id="logo-text">
             </a>
@@ -94,7 +93,7 @@
                 </ul>
             </nav>
 
-            <a href="" class="sidebar-upload-btn">
+            <a href="upload_material.html" class="sidebar-upload-btn">
                 <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -110,13 +109,10 @@
 
             <header>
                 <div class="logo">
-                    <a href="" id="burger-menu">
-                        <img src="graphics/burger-menu.svg" alt="Menu" id="burger-icon">
+                    <a href="javascript:history.back()" id="back-icon">
+                        <img src="graphics/back.png" alt="Back" id="back">
                     </a>
-                    <a href="index.html" id="logo-link">
-                        <img src="graphics/lina_logo.png" alt="LINA Logo" id="logo">
-                        <img src="graphics/LINA.png" alt="LINA Logo" id="logo-text">
-                    </a>
+                    <h3>Upload Material</h3>
                 </div>
                 <div class="right-side">
                     <div class="search-icon">
@@ -134,14 +130,15 @@
 
             <!-- Desktop-only search bar -->
             <div class="topbar-desktop">
+                <h3>Upload Material</h3>
                 <label class="search-bar">
                     <img src="graphics/Search_Icon.svg.webp" alt="" class="search-bar-icon">
                     <input type="search" name="search" placeholder="Search...">
                 </label>
             </div>
 
-            <!--Upload Materials Main Content-->
-            <main id="upload_main">
+            <!-- MAIN CONTENT -->
+            <main>
                 
             </main>
 
@@ -155,7 +152,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="upload_material.html">
                                 <img src="graphics/create.png" alt="Create" class="icon">
                             </a>
                         </li>

@@ -1,0 +1,73 @@
+/*
+    <!--
+    CARANTO, CRISIANE JOSEF A.
+    MANGALIMAN, ROLAIGNE E.
+    VELASCO, AIKEN A.
+
+    CYB 202
+    INTROWEB - FINAL REQUIREMENT - MAIN STYLESHEET
+    -->
+*/
+
+@import url("https://fonts.googleapis.com");
+
+/* VARIABLES */
+:root {
+    /* PRIMARY COLOR SCHEME */
+    --primary-red1: #C00F0C;
+    --primary-red2: #C43D3D;
+    --primary-white1: #f5f5f5;
+    --primary-white2: #ffffff;
+
+    /* COMPLEMENTARY COLOR SCHEME */
+    --text-black: #000000;
+    --button-black: #1E1E1E;
+    --border-black: #303030;
+
+    /* QUIZZES SECTION */
+    --blue: #29A8CF;
+    --green: #B8E5A8;
+    --pink: #F8A2A1;
+
+    /* FONTS */
+    --main-font: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --logo-font: 'Dongle', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--text-black);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*===============================
+  LESSON PAGE HEADING
+===============================*/ 
+
+@media (min-width: 1024px){
+    .topbar-desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .topbar-desktop h3{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-red1);
+        margin-right: 1rem;
+    }
+}
