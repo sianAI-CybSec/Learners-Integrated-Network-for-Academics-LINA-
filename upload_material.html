@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dongle&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lina_styles.css">
     <link rel="stylesheet" href="upload_material_styles.css">
+    <script src="upload_material.js" defer></script>
 </head>
 <body>
     <div class="app-shell">
@@ -140,9 +141,27 @@
             <!-- MAIN CONTENT -->
             <main id="upload-main">
                 <form id="upload-form" method="post" enctype="multipart/form-data">
-                    <fieldset id="file-upload">
-                        <legend>Upload File</legend>
-                        <input type="file" id="file-input" name="file">
+                    <fieldset id="file-upload-field">
+                        <legend id="upload-legend">Upload File</legend>
+                        <div class="file-upload-wrapper">
+                            <!-- Hidden -->
+                            <input type="file" id="file-upload" class="file-input" />
+                            
+                            <div class="file-upload-label">
+                                <!-- Custom Styled Label -->
+                                <label for="file-upload" class="custom-file-upload">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="8" x2="12" y2="16"></line>
+                                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                                    </svg>
+                                </label>
+                                <span>Choose File (pdf, doc, docx)</span>
+                            </div>
+                            
+                            <!-- Container to display selected file name -->
+                            <span id="file-name" class="file-name">No file chosen</span>
+                        </div>
                     </fieldset>
                     <hr>
                     <fieldset id="file-info">
@@ -187,8 +206,8 @@
                             </select>
                         </label>
                     </fieldset>
-                    <button type="submit" id="upload-btn">Upload</button>
-                    <button type="reset" id="reset-btn">Reset</button>
+                    <button type="submit" id="upload-btn" value="upload">Upload</button>
+                    <button type="reset" id="reset-btn" value="reset">Reset</button>
                 </form>
             </main>
 
