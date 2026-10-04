@@ -560,7 +560,8 @@ header {
 }
 
 #greeting {
-    font-size: 1.3em;
+    font-size: 1.5em;
+    margin-bottom: 18px;
 }
 
 .functions {
@@ -1240,12 +1241,9 @@ header {
     /* ---- Desktop search topbar ---- */
     .topbar-desktop {
         display: flex;
-<<<<<<< HEAD
         justify-content: space-between; 
         align-items: center;
-=======
         justify-content: space-between;
->>>>>>> 8e0e8c6dc896c3615197500e3ceca04eef6ce623
         padding: 28px 40px 0;
     }
 
@@ -1277,23 +1275,6 @@ header {
         grid-template-columns: repeat(4, 1fr);
     }
 
-<<<<<<< HEAD
-    .category-card p {
-            font-size: 1.15em; 
-        }
-
-    /* ---- Recent lessons: flexible grid, larger cards, even heights ---- */
-    .dated-recent-lessons {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-        align-items: stretch; 
-    }
-
-    .recent-card {
-        height: 100%; 
-        min-height: 340px; 
-        padding: 16px;
-        justify-content: space-between; 
-=======
     /* ---- Recent lessons: auto-fitting grid ---- */
     .dated-recent-lessons {
         display: grid;
@@ -1308,19 +1289,15 @@ header {
     .recent-card {
         width: 100%;
         height: 100%;
->>>>>>> 8e0e8c6dc896c3615197500e3ceca04eef6ce623
     }
 
     /* ---- Uniform thumbnail sizes ---- */
     .recent-card .recent-img {
-<<<<<<< HEAD
         height: 180px; 
         width: 100%;
         object-fit: cover; 
         border-radius: 4%; 
-=======
         height: 150px;
         max-height: none;
->>>>>>> 8e0e8c6dc896c3615197500e3ceca04eef6ce623
     }
 }
