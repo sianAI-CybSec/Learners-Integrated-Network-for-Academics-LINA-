@@ -51,24 +51,22 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
     const errorMessage = document.getElementById('errorMessage');
     
     if (!file) {
-        return; // No file selected
+        return; 
     }
 
-    // Define allowed extensions and MIME types
     const allowedExtensions = /(\.pdf|\.doc|\.docx)$/i;
     const allowedMimeTypes = [
         'application/pdf',
-        'application/msword', // .doc
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.document' // .docx
+        'application/msword', 
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document' 
     ];
 
-    // Validate extension and MIME type
     const isValidExtension = allowedExtensions.exec(file.name);
     const isValidMime = allowedMimeTypes.includes(file.type);
 
     if (!isValidExtension || !isValidMime) {
         errorMessage.style.display = 'block';
-        event.target.value = ''; // Clear the invalid file input
+        event.target.value = ''; 
     } else {
         errorMessage.style.display = 'none';
         console.log('File is valid:', file.name);

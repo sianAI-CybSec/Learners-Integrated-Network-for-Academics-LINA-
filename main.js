@@ -172,3 +172,24 @@ function setupSignup() {
             window.location.href = "home.html";
         });
     }
+
+/* ============================================
+    Dark Mode
+============================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    applySavedTheme(); // Check and apply dark mode on every page load
+    setupLogin();
+    setupSignup();
+});
+
+/**
+ * Checks localStorage and applies the dark theme if saved as enabled.
+ */
+function applySavedTheme() {
+    const savedTheme = localStorage.getItem('linaDarkMode');
+    if (savedTheme === 'enabled') {
+        document.body.classList.add('dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
+    }
+}
