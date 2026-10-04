@@ -1,0 +1,331 @@
+/*
+    <!--
+    CARANTO, CRISIANE JOSEF A.
+    MANGALIMAN, ROLAIGNE E.
+    VELASCO, AIKEN A.
+
+    CYB 202
+    INTROWEB - FINAL REQUIREMENT - MAIN STYLESHEET
+    -->
+*/
+
+@import url("https://fonts.googleapis.com");
+
+/* VARIABLES */
+:root {
+    /* PRIMARY COLOR SCHEME */
+    --primary-red1: #C00F0C;
+    --primary-red2: #C43D3D;
+    --primary-white1: #f5f5f5;
+    --primary-white2: #ffffff;
+
+    /* COMPLEMENTARY COLOR SCHEME */
+    --text-black: #000000;
+    --button-black: #1E1E1E;
+    --border-black: #303030;
+
+    /* QUIZZES SECTION */
+    --blue: #29A8CF;
+    --green: #B8E5A8;
+    --pink: #F8A2A1;
+
+    /* FONTS */
+    --main-font: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --logo-font: 'Dongle', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--text-black);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*===============================
+  UPLOAD PAGE HEADING
+===============================*/ 
+.topbar-mobile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topbar-mobile h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-left: 1rem;
+}
+
+.topbar-mobile #back{
+    object-fit: cover;
+    width: 36px;
+}
+
+/*===============================
+    UPLOAD FORMS STYLES
+===============================*/
+#upload-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+#upload-legend{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-black);
+}
+
+#upload-form label{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-black);
+}
+
+/* ====== FILE UPLOAD STYLES ====== */
+#file-upload-field{
+    margin: 5px 0 -5px;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    font-family: var(--main-font);
+}
+
+.file-upload-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.file-upload-label span{
+    font-size: 1rem;
+    color: var(--primary-red1);
+}
+
+.custom-file-upload {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    background-color: var(--primary-white1);
+    color: var(--primary-red1);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+.custom-file-upload svg {
+    stroke: var(--primary-red1);
+    transition: stroke 0.2s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--primary-red1);
+}
+
+.custom-file-upload:hover svg {
+    stroke: var(--primary-white2);
+}
+
+.custom-file-upload:active {
+    transform: scale(0.98);
+}
+
+.custom-file-upload:active svg {
+    stroke: var(--primary-white2);
+}
+
+.file-name {
+    font-size: 1em;
+    color: var(--border-black);
+}
+
+/* ====== FILE INFO STYLES ====== */
+#file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: none; 
+    padding: 0;
+}
+
+#file-info label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#file-info label span {
+    font-size: 0.9rem;
+    color: var(--text-black);
+}
+
+#file-info input, 
+#file-info select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border-black);
+    border-radius: 4px;
+    font-family: var(--main-font);
+    font-size: 1rem;
+    background-color: var(--primary-white2);
+    color: var(--text-black);
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#file-info input[type="text"]::placeholder {
+    font-size: 1rem;
+    font-family: var(--main-font);
+    color: var(--border-black);
+}
+
+/* Active / Focus state for inputs and select controls */
+#file-info input:focus, 
+#file-info select:focus {
+    border-color: var(--primary-red2);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+#file-info select:not([multiple]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    cursor: pointer;
+    padding-right: 36px; 
+    
+    /* Custom SVG Dropdown Arrow */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+#file-info select option[value=""][disabled] {
+    color: var(--border-black);
+}
+
+#file-info select[multiple] {
+    -webkit-appearance: menulist;
+    appearance: menulist;         
+    height: 140px;
+    padding: 4px;
+    overflow-y: auto;
+}
+
+#file-info select[multiple] option {
+    padding: 6px 10px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+/* Style selected options in multi-select */
+#file-info select[multiple] option:checked,    
+#file-info select[multiple] option:hover {
+    background-color: var(--primary-red2);
+    color: var(--primary-white2);
+}
+
+/*======= UPLOAD AND RESET BUTTONS =======*/
+#upload-reset-btns{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+.form-btn{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--main-font);
+    border: 1px solid var(--border-black);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#upload-btn{
+    background-color: var(--primary-red2);
+    color: var(--primary-white2);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#upload-btn:hover, #upload-btn:active {
+    transform: scale(1.02);
+    background-color: var(--primary-red1);
+}
+
+#reset-btn{
+    background-color: var(--primary-white1);
+    color: var(--text-black);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#reset-btn:hover, #reset-btn:active {
+    transform: scale(1.02);
+    background-color: var(--pink);
+    color: var(--text-black);
+}
+
+
+/*===============================
+    RESpONSIVE STYLES
+===============================*/
+@media (min-width: 1024px){
+    .topbar-desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .topbar-desktop h3{
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--text-black);
+        margin-right: 1rem;
+    }
+
+    #upload-form{
+        margin: 8px 1.6vw 0;
+        width: 80vw;
+    }
+
+    #file-info{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}

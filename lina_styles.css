@@ -699,6 +699,13 @@ header {
     flex-direction: column;
 }
 
+/* Date labels above each group of recent lessons */
+.recent-lessons .date {
+    font-size: 0.95em;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
 .dated-recent-lessons {
     padding: 12px 0;
     display: flex;
@@ -1111,30 +1118,37 @@ header {
         max-width: 56px;
     }
 
-    /* ---- Recent lessons: 2-column grid per date group ---- */
+    /* ---- Recent lessons: 3-column grid per date group ---- */
     .recent-lessons {
         padding: 0 20px;
     }
 
     .dated-recent-lessons {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 14px;
         padding: 16px 0;
-        overflow-x: visible;
-        overflow-y: visible;
+        overflow: visible;
     }
 
     .recent-card-link {
         width: 100%;
+        min-width: 0;
     }
 
     .recent-card {
-        height: 280px;
+        height: 100%;          /* equal-height cards, sized by content */
+        justify-content: flex-start;
+        gap: 8px;
     }
 
     .recent-card .recent-img {
-        max-height: 130px;
+        height: 130px;
+        max-height: none;
+    }
+
+    .rating .rating-star {
+        width: 16px;
     }
 }
 
@@ -1226,9 +1240,20 @@ header {
     /* ---- Desktop search topbar ---- */
     .topbar-desktop {
         display: flex;
+<<<<<<< HEAD
         justify-content: space-between; 
         align-items: center;
+=======
+        justify-content: space-between;
+>>>>>>> 8e0e8c6dc896c3615197500e3ceca04eef6ce623
         padding: 28px 40px 0;
+    }
+
+    #home-h3{
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--text-black);
+        margin-right: 1rem;
     }
 
     /* ---- Content area spacing ---- */
@@ -1252,6 +1277,7 @@ header {
         grid-template-columns: repeat(4, 1fr);
     }
 
+<<<<<<< HEAD
     .category-card p {
             font-size: 1.15em; 
         }
@@ -1267,13 +1293,34 @@ header {
         min-height: 340px; 
         padding: 16px;
         justify-content: space-between; 
+=======
+    /* ---- Recent lessons: auto-fitting grid ---- */
+    .dated-recent-lessons {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+    }
+
+    .recent-card-link {
+        width: 100%;
+    }
+
+    .recent-card {
+        width: 100%;
+        height: 100%;
+>>>>>>> 8e0e8c6dc896c3615197500e3ceca04eef6ce623
     }
 
     /* ---- Uniform thumbnail sizes ---- */
     .recent-card .recent-img {
+<<<<<<< HEAD
         height: 180px; 
         width: 100%;
         object-fit: cover; 
         border-radius: 4%; 
+=======
+        height: 150px;
+        max-height: none;
+>>>>>>> 8e0e8c6dc896c3615197500e3ceca04eef6ce623
     }
 }
