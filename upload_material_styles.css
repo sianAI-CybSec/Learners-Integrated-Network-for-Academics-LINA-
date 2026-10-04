@@ -303,8 +303,37 @@ a {
 
 
 /*===============================
-    RESpONSIVE STYLES
+    RESPONSIVE STYLES
 ===============================*/
+/* TABLET VIEWPORT */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .topbar-mobile h3 {
+        font-size: 1.5rem;
+    }
+
+    #upload-form {
+        width: 90vw;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    #file-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    #upload-reset-btns {
+        justify-content: flex-end;
+    }
+
+    .form-btn {
+        width: auto;
+        min-width: 150px;
+    }
+}
+
+/* DESKTOP/LAPTOP VIEWPORT */
 @media (min-width: 1024px){
     .topbar-desktop{
     display: flex;
