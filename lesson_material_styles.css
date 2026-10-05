@@ -132,7 +132,7 @@
         gap: 15px;
     }
 
-    /* Displays the desktop title on tablets to optimize screen space */
+    
     #desktop-title {
         display: flex;
         align-items: center;
@@ -156,7 +156,7 @@
         min-height: 75vh;
     }
 
-    /* Limits PDF canvas width on larger tablet screens for better reading proportions */
+    
     .canvas-wrapper {
         max-width: 90%;
     }
