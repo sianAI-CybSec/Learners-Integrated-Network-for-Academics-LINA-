@@ -1,10 +1,10 @@
-import * as pdfjsLib from "/pdfjs/pdf.mjs";
+import * as pdfjsLib from './pdfjs/pdf.mjs';
 
-// Define the service worker route for background processing tasks
-pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdfjs/pdf.worker.mjs";
+// Resolve paths relative to THIS file so they work wherever the page is served from
+pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./pdfjs/pdf.worker.mjs', import.meta.url).href;
 
-// Replace this with your actual local or hosted file path
-const pdfUrl = '/lessons/IntroToJavaLesson.pdf';
+// Must match the exact filename (case-sensitive on most servers)
+const pdfUrl = new URL('./lessons/java.pdf', import.meta.url).href;
 
 let pdfDoc = null,
     pageNum = 1,
@@ -13,82 +13,69 @@ let pdfDoc = null,
 
 const canvas = document.getElementById('pdf-canvas');
 const ctx = canvas.getContext('2d');
+const prevBtn = document.getElementById('prev-page');
+const nextBtn = document.getElementById('next-page');
 
-/*==================================
-  Render the specified page.
-===================================*/
 function renderPage(num) {
     pageIsRendering = true;
 
-  // Fetch the page metadata
     pdfDoc.getPage(num).then(page => {
-        // 1. Calculate device scale for sharp text rendering on Retina/High-DPI displays
         const outputScale = window.devicePixelRatio || 1;
-        
-        // Base viewport scale (1.5)
         const viewport = page.getViewport({ scale: 1.5 });
+
+        // Bitmap size (sharp on high-DPI) vs. CSS display size
         canvas.width = Math.floor(viewport.width * outputScale);
         canvas.height = Math.floor(viewport.height * outputScale);
+        canvas.style.width = Math.floor(viewport.width) + 'px';
 
         const transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
 
-        const renderContext = {
-        canvasContext: ctx,
-        viewport: viewport,
-        transform: transform
-        };
+        const renderTask = page.render({ canvasContext: ctx, viewport, transform });
 
-        const renderTask = page.render(renderContext);
-
-        renderTask.promise.then(() => {
-        pageIsRendering = false;
-
-        if (pageNumPending !== null) {
-            renderPage(pageNumPending);
-            pageNumPending = null;
-        }
+        return renderTask.promise.then(() => {
+            pageIsRendering = false;
+            if (pageNumPending !== null) {
+                const next = pageNumPending;
+                pageNumPending = null;
+                renderPage(next);
+            }
         });
-
-        // Update the counter text values on screen
-        document.getElementById('page-num').textContent = num;
+    }).catch(err => {
+        pageIsRendering = false;
+        console.error('Error rendering page:', err);
     });
 
-    // Enable/Disable buttons safely depending on positional status
-    document.getElementById('prev-page').disabled = (num <= 1);
-    document.getElementById('next-page').disabled = (num >= pdfDoc.numPages);
+    document.getElementById('page-num').textContent = num;
+    prevBtn.disabled = num <= 1;
+    nextBtn.disabled = num >= pdfDoc.numPages;
 }
 
-/*====================================================================
- * Handle queue checking so user double-clicks don't crash rendering engines
-====================================================================*/
 function queueRenderPage(num) {
-    if (pageIsRendering) {
-        pageNumPending = num;
-    } else {
-        renderPage(num);
-    }
+    if (pageIsRendering) pageNumPending = num;
+    else renderPage(num);
 }
 
-// Navigation Actions
-document.getElementById('prev-page').addEventListener('click', () => {
+prevBtn.addEventListener('click', () => {
     if (pageNum <= 1) return;
     pageNum--;
     queueRenderPage(pageNum);
 });
 
-document.getElementById('next-page').addEventListener('click', () => {
-    if (pageNum >= pdfDoc.numPages) return;
+nextBtn.addEventListener('click', () => {
+    if (!pdfDoc || pageNum >= pdfDoc.numPages) return;
     pageNum++;
     queueRenderPage(pageNum);
 });
 
-pdfjsLib.getDocument(pdfUrl).promise.then(pdfDoc_ => {
-    pdfDoc = pdfDoc_;
+pdfjsLib.getDocument({ url: pdfUrl }).promise.then(doc => {
+    pdfDoc = doc;
     document.getElementById('page-count').textContent = pdfDoc.numPages;
-    
-    // Render the initial landing page
     renderPage(pageNum);
 }).catch(err => {
-    console.error('Error loading PDF engine data:', err);
-    document.querySelector('.canvas-wrapper').innerHTML = '<p style="color:red; padding:20px;">Failed to display PDF document.</p>';
+    console.error('Error loading PDF:', err);
+    // Don't wipe the canvas wrapper; show the message beside it
+    const msg = document.createElement('p');
+    msg.style.cssText = 'color:#ffb4b4; padding:20px;';
+    msg.textContent = 'Failed to display PDF document. Check the browser console (F12) for details.';
+    document.querySelector('.pdf-viewport').appendChild(msg);
 });
