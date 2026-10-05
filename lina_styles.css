@@ -552,18 +552,6 @@ header {
     width: 35px;
 }
 
-.topbar-mobile{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.topbar-mobile #back{
-    object-fit: cover;
-    width: 36px;
-}
-
-
 /*===============================
     MAIN FUNCTIONS
 ============================== */
@@ -983,6 +971,17 @@ header {
     color: var(--text-black);
 }
 
+/* =========================================
+   DARK MODE OVERRIDES
+========================================= */
+body.dark-theme {
+    --primary-white1: #121212; 
+    --primary-white2: #1e1e1e; 
+    --text-black: #e0e0e0;    
+    --border-black: #333333;   
+    
+}
+
 /* ============================================================
    RESPONSIVE MEDIA QUERIES
    ============================================================ */
@@ -1312,4 +1311,57 @@ header {
         height: 150px;
         max-height: none;
     }
+}
+
+/* GLOBAL DARK MODE FIXES */
+body, html, .main-wrapper {
+    background-color: var(--primary-white1);
+    color: var(--text-black);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme {
+    --primary-white1: #121212;
+    --primary-white2: #1E1E1E;
+    --text-black: #EAEAEA;
+    --border-black: #2C2C2C;
+    --button-black: #2D2D2D;
+}
+
+body.dark-theme #search-icon,
+body.dark-theme .search-bar-icon,
+body.dark-theme #burger-icon,
+body.dark-theme #logo-text,
+body.dark-theme .back-img,
+body.dark-theme #back,
+body.dark-theme .toggle-btn i {
+    filter: brightness(0) invert(0.85); 
+}
+
+body.dark-theme input, 
+body.dark-theme select, 
+body.dark-theme .search-bar,
+body.dark-theme .internal-search-bar {
+    background-color: var(--primary-white2);
+    color: var(--text-black);
+    border-color: var(--border-black);
+}
+
+body.dark-theme input::placeholder {
+    color: #888888; 
+}
+
+body.dark-theme .custom-file-upload {
+    background-color: var(--primary-white2);
+    border: 1px solid var(--border-black);
+}
+
+body.dark-theme #file-info select option {
+    background-color: var(--primary-white2);
+    color: var(--text-black);
+}
+
+body.dark-theme .settings-info p,
+body.dark-theme .settings-section-title {
+    color: #B0B0B0; 
 }
