@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LINA - Completed Quizzes</title>
+    <title>LINA - Daily Featured</title>
     <!--
     CARANTO, CRISIANE JOSEF A.
     MANGALIMAN, ROLAIGNE E.
     VELASCO, AIKEN A.
+
+    CYB 202
+    INTROWEB - FINAL REQUIREMENT
     -->
     <link rel="icon" type="image/png" href="graphics/lina_logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dongle&display=swap" rel="stylesheet">
-    
-    <!-- Link to Existing Core Styles and New Specific Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="lina_styles.css">
-    <link rel="stylesheet" href="completed_quizzes.css">
+    <link rel="stylesheet" href= "dailyFeatured.css"> 
+
+
+
 </head>
 <body>
-    <div class="app-shell">
-
+    <div class="daily-featured-page">
+        <div class="app-shell">
         <!-- ============================================
              DESKTOP NAVBAR
         ============================================= -->
-        <aside class="sidebar">
-            <a href="home.html" class="sidebar-logo">
+  <aside class="sidebar">
+            <a href="/home.html" class="sidebar-logo">
                 <img src="graphics/lina_logo.png" alt="LINA Logo" id="logo">
                 <img src="graphics/LINA.png" alt="LINA" id="logo-text">
             </a>
@@ -49,8 +55,7 @@
                         </a>
                     </li>
                     <li>
-                        <!-- ACTIVE STATE ON COMPLETED QUIZZES -->
-                        <a href="completed_quizzes.html" class="sidebar-link active">
+                        <a href="completed_quizzes.html" class="sidebar-link">
                             <img src="graphics/completed_quiz.webp" class="sidebar-icon" alt="">
                             Completed Quizzes
                         </a>
@@ -62,7 +67,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="dailyFeatured.html" class="sidebar-link">
+                        <a href="dailyFeatured.html" class="sidebar-link active">
                             <img src="graphics/daily_featured.webp" class="sidebar-icon" alt="">
                             Daily Featured
                         </a>
@@ -94,17 +99,16 @@
             </a>
         </aside>
 
-        <!-- ============================================
+         <!-- ============================================
              MAIN CONTENT WRAPPER
         ============================================= -->
         <div class="main-wrapper">
-            <!-- Mobile Header -->
             <header>
                 <div class="topbar-mobile">
                     <a href="home.html" id="back-icon">
                         <img src="graphics/back.png" alt="Back" class="back-img">
                     </a>
-                    <h3 class="mobile-header-title">Quizzes</h3>
+                    <h3 class="mobile-header-title">Daily Featured</h3>
                 </div>
                 <div class="right-side">
                     <div class="search-icon">
@@ -118,7 +122,7 @@
 
             <!-- Desktop-only search bar -->
             <div class="topbar-desktop">
-                <h3 class="desktop-header-title">Quizzes</h3>
+                <h3 class="desktop-header-title">Daily Featured</h3>
                 <label class="search-bar">
                     <img src="graphics/Search_Icon.svg.webp" alt="" class="search-bar-icon">
                     <input type="search" name="search" placeholder="Search...">
@@ -126,103 +130,71 @@
             </div>
 
             <!-- MAIN CONTENT -->
-            <main id="quizzes-main">
+            <main id="dailyfeatured-main">
                 
-                <!-- Internal Folder/Notes Search-->
-                <div class="internal-search-container">
-                    <label class="internal-search-bar">
-                        <input type="search" placeholder="Search a folder or notes here">
-                        <img src="graphics/Search_Icon.svg.webp" alt="Search" class="search-bar-icon">
-                    </label>
-                </div>
+                <section class="dailyfeatured-section" aria-labelledby="book-discoveires">
+                    <h2 class="dailyfeatured-heading" id="book-discoveires">Book Discoveries</h2>
+                    <p class="dailyfeatured-subheading">Free supplemental books published to help you learn better</p>
 
-                <!-- DASHBOARD VIEW: Completed & Available Quizzes -->
-                <div id="quiz-dashboard-view">
-                    <section class="quiz-section">
-                        <h4>Completed Quizzes</h4>
-                        <div class="quiz-list-container">
-                            <!-- Quiz Row 1 -->
-                            <div class="quiz-row">
-                                <div class="quiz-title">Java Print Statement</div>
-                                <div class="quiz-score score-pass">19/20</div>
-                                <div class="quiz-action">
-                                    <button class="btn-review" onclick="openReview()">Review</button>
-                                </div>
+                    <div class="book-grid">
+                        <a href="https://pages.cs.wisc.edu/~ace/media/gray-hat-hacking.pdf" class="book-card" target="_blank" rel="noopener noreferrer">
+                            <img src ="graphics/greyHatHacking.png" alt="Grey Hat Hacking book cover" class="book-cover">
+                            <h4 class="book-title">Grey Hat Hacking</h4>
+                            <p class="book-author">By Harper et al. (2011)</p>
+                            <p class="book-category">Cybersecurity</p>
+                            <div class="book-rating">
+                                <i class="fa-regular fa-star"> 4.9 (60)</i>
                             </div>
-                            <!-- Quiz Row 2 -->
-                            <div class="quiz-row">
-                                <div class="quiz-title">Stacks and Queues</div>
-                                <div class="quiz-score score-pass">20/20</div>
-                                <div class="quiz-action">
-                                    <button class="btn-review" onclick="openReview()">Review</button>
-                                </div>
-                            </div>
-                            <!-- Quiz Row 3 -->
-                            <div class="quiz-row">
-                                <div class="quiz-title">Banker's Algorithm</div>
-                                <div class="quiz-score score-fail">10/20</div>
-                                <div class="quiz-action">
-                                    <button class="btn-review" onclick="openReview()">Review</button>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                        </a>
 
-                    <section class="quiz-section">
-                        <h4>Available Quizzes</h4>
-                        <div class="quiz-list-container">
-                            <!-- Available Quiz Row -->
-                            <div class="quiz-row">
-                                <div class="quiz-title">HTML Elements</div>
-                                <div class="quiz-score empty-score"></div>
-                                <div class="quiz-action">
-                                    <button class="btn-take">Take</button>
-                                </div>
+                        <a href="https://cdn.bookey.app/files/pdf/book/en/real-world-bug-hunting.pdf" class="book-card" target="_blank" rel="noopener noreferrer">
+                            <img src ="graphics/bugHunting.png" alt="Real World Bug Hunting book cover" class="book-cover">
+                            <h4 class="book-title">Real-World Bug Hunting</h4>
+                            <p class="book-author">By Yaworkski, P. (2019)</p>
+                            <p class="book-category">Cybersecurity</p>
+                            <div class="book-rating">
+                                <i class="fa-regular fa-star"> 4.7 (123)</i>
                             </div>
-                        </div>
-                    </section>
-                </div>
+                        </a>
 
-                <!-- DETAILED REVIEW VIEW (Hidden by default) -->
-                <div id="quiz-review-view" class="hidden">
-                    <div class="quiz-progress-bar">
-                        <span class="progress-left">Item 1 of 20</span>
-                        <span class="progress-right">1/1</span>
+                        <a href="https://e-library.kpefk.com.ua/wp-content/uploads/2023/09/cybersecurity-for-dummies.pdf" class="book-card" target="_blank" rel="noopener noreferrer">
+                            <img src ="graphics/cybForDummies.png" alt="Cybersecurity for dummies book cover" class="book-cover">
+                            <h4 class="book-title">Cybersecurity for Dummies</h4>
+                            <p class="book-author">By Steinberg, J. (2025)</p>
+                            <p class="book-category">Cybersecurity</p>
+                            <div class="book-rating">
+                                <i class="fa-regular fa-star"> 4.5 (89)</i>
+                            </div>
+                        </a>
                     </div>
+                </section>
 
-                    <div class="question-container">
-                        <p class="question-text">What is the HTML element used to display content text or paragraphs?</p>
-                        
-                        <div class="options-group">
-                            <!-- Correct Option Validated State -->
-                            <label class="option-row validated-correct-option">
-                                <input type="radio" name="q1" checked disabled>
-                                <span class="option-text">&lt;p&gt;</span>
-                            </label>
-                            
-                            <!-- Incorrect/Unselected Options -->
-                            <label class="option-row">
-                                <input type="radio" name="q1" disabled>
-                                <span class="option-text">&lt;em&gt;</span>
-                            </label>
-                            <label class="option-row">
-                                <input type="radio" name="q1" disabled>
-                                <span class="option-text">&lt;article&gt;</span>
-                            </label>
-                            <label class="option-row">
-                                <input type="radio" name="q1" disabled>
-                                <span class="option-text">&lt;body&gt;</span>
-                            </label>
-                        </div>
+                <section class="dailyfeatured-section" aria-labelledby="video-discoveries">
+                    <h2 class="dailyfeatured-heading" id="video-discoveries">Video Discoveries</h2>
+                    <p class="dailyfeatured-subheading">Free Youtube videos to supplement your learning</p>
+
+                    <div class="video-grid">
+                        <a href="https://youtu.be/hzlR0R91lZA?si=WOEuXJnTiyaONGhi" class="video-card" target="_blank" rel="noopener noreferrer">
+                            <img src="graphics/aiScheming.jpg" alt="Do they know that we know they know?" class="vid-thumbnail">
+                            <h4 class="video-title">Do they know that we know that they know?</h4>
+                            <div class="vide-meta">
+                                <p>By Rational Animations</p>
+                                <p>June 7, 2026</p>
+                            </div>
+                        </a>
+
+                        <a href="https://youtu.be/fxqcwK5OMag?si=iYlSMscVvb9N_CDT" class="video-card" target="_blank" rel="noopener noreferrer">
+                            <img src="graphics/shadowBrokers.jpg" alt="How do you hack a god?" class="vid-thumbnail">
+                            <h4 class="video-title">The Biggest Hacking Mystery of Our Time: Shadow Broker</h4>
+                            <div class="vide-meta">
+                                <p>By Cybernews</p>
+                                <p>July 4, 2025</p>
+                            </div>
+                        </a>
                     </div>
-
-                    <div class="review-nav-actions">
-                        <button class="btn-next" onclick="closeReview()">Next</button>
-                    </div>
-                </div>
-
+                </section>
             </main>
-
+                
             <!-- Mobile / tablet bottom nav -->
             <footer>
                 <nav class="home-nav">
@@ -232,8 +204,7 @@
                                 <img src="graphics/home.png" alt="Home" class="icon">
                             </a>
                         </li>
-                        <li>
-                           
+                        <li> 
                             <a href="upload_material.html">
                                 <img src="graphics/create.png" alt="Create" class="icon">
                             </a>
@@ -246,11 +217,9 @@
                     </ul>
                 </nav>
             </footer>
+
         </div>
     </div>
-
-    <!-- Base JS and Page Specific JS -->
-    <script src="main.js"></script>
-    <script src="completed_quizzes.js"></script>
+    <script src="dailyFeatured.js"></script>
 </body>
 </html>
