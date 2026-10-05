@@ -1,0 +1,278 @@
+/*
+    LINA - Completed Quizzes Stylesheet
+    Requires variables from lina_styles.css
+*/
+
+/* --- Topbar & Headings Adjustments --- */
+.mobile-header-title,
+.desktop-header-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-black);
+}
+
+.mobile-header-title {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+
+.back-img {
+    width: 28px;
+    object-fit: contain;
+}
+
+#quizzes-main {
+    padding: 1rem 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Internal Search Bar --- */
+.internal-search-container {
+    width: 100%;
+    max-width: 600px;
+}
+.internal-search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-white1);
+    border: 1px solid var(--border-black);
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+.internal-search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-family: var(--main-font);
+    font-size: 0.9em;
+    color: var(--text-black);
+}
+
+/* --- Quiz Dashboard Section --- */
+.quiz-section {
+    margin-bottom: 24px;
+}
+.quiz-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-black);
+}
+
+/* --- Grid List Styling --- */
+.quiz-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 600px;
+}
+
+.quiz-row {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-white1);
+    border: 1px solid var(--border-black);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quiz-title {
+    flex: 2;
+    padding: 10px 12px;
+    font-size: 0.9em;
+    font-weight: 500;
+    border-right: 1px solid rgba(0,0,0,0.05); 
+}
+
+.quiz-score {
+    flex: 1;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9em;
+    padding: 10px 4px;
+}
+
+/* Specific Score Colors */
+.score-pass {
+    color: #4CAF50; 
+}
+.score-fail {
+    color: var(--primary-red2); 
+}
+.empty-score {
+    color: transparent;
+}
+
+.quiz-action {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Base button styles for Quizzes */
+.quiz-action button {
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 0.85em;
+    padding: 6px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.quiz-action button:hover {
+    transform: scale(0.97);
+    opacity: 0.9;
+}
+
+.btn-review {
+    background-color: var(--primary-red2);
+    color: var(--primary-white2);
+}
+
+.btn-take {
+    background-color: var(--blue);
+    color: var(--primary-white2);
+}
+
+
+/* =========================================
+   DETAILED REVIEW VIEW (Component B)
+========================================= */
+.hidden {
+    display: none !important;
+}
+
+#quiz-review-view {
+    max-width: 700px;
+    width: 100%;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Blue Header Bar */
+.quiz-progress-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--blue);
+    color: var(--primary-white2);
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 0.9em;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* Question Body */
+.question-container {
+    background-color: var(--primary-white1);
+    border: 1px solid var(--border-black);
+    border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 20px 16px;
+    margin-bottom: 16px;
+}
+
+.question-text {
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.options-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; 
+}
+
+/* Individual Option Rows */
+.option-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 2px;
+}
+
+.option-row input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: default;
+}
+
+.option-text {
+    font-size: 0.9em;
+    font-family: monospace; 
+}
+
+
+.validated-correct-option {
+    background-color: #C1E1C1; 
+
+.validated-correct-option input[type="radio"] {
+    
+    accent-color: var(--primary-red1);
+}
+
+/* Next Button Navigation */
+.review-nav-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-next {
+    background-color: var(--primary-white1);
+    color: var(--text-black);
+    border: 1px solid var(--border-black);
+    border-radius: 4px;
+    padding: 6px 24px;
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-next:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* =========================================
+   RESPONSIVE QUERIES
+========================================= */
+
+@media (min-width: 768px) {
+    #quizzes-main {
+        padding: 24px 40px;
+    }
+    
+    .quiz-title {
+        font-size: 1em;
+    }
+    
+    .quiz-score {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1024px) {
+    #quizzes-main {
+        padding: 0 40px;
+        margin-top: 24px;
+    }
+}}
