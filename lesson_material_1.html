@@ -112,7 +112,7 @@
                     <a href="javascript:history.back()" id="back-icon">
                         <img src="graphics/back.png" alt="Back" id="back">
                     </a>
-                    <h3 class="lesson-open-title"><span id="lesson-material-title-open">Java and its print statement</span></h3>
+                    <h3 class="lesson-open-title"><span class="lesson-material-title-open">Intro to Java Programming</span></h3>
                 </div>
                 <div class="right-side">
                     <div class="search-icon">
@@ -130,19 +130,21 @@
 
             <!-- Desktop-only search bar -->
             <div class="topbar-desktop">
-                <h3>Upload Material</h3>
-                <label class="search-bar">
-                    <img src="graphics/Search_Icon.svg.webp" alt="" class="search-bar-icon">
-                    <input type="search" name="search" placeholder="Search...">
-                </label>
             </div>
 
             <!-- MAIN CONTENT -->
             <main class="lesson-open-main">
                 <div class="pdf-toolbar">
-                    <button id="prev-page" class="nav-btn">◀ Prev</button>
-                    <span class="page-counter">Page <span id="page-num">1</span> of <span id="page-count">-</span></span>
-                    <button id="next-page" class="nav-btn">Next ▶</button>
+                    <h3 id="desktop-title" class="lesson-open-title"><span class="lesson-material-title-open">Intro to Java Programming</span></h3>
+                    <div class="main-toolbar">
+                        <button id="prev-page" class="nav-btn">◀ Prev</button>
+                        <span class="page-counter">Page <span id="page-num">1</span> of <span id="page-count">-</span></span>
+                        <button id="next-page" class="nav-btn">Next ▶</button>
+                    </div>
+                    <label id="desktop-search" class="search-bar">
+                        <img src="graphics/Search_Icon.svg.webp" alt="" class="search-bar-icon">
+                        <input type="search" name="search" placeholder="Search...">
+                    </label>
                 </div>
 
                 <!-- responsive container for the document -->
@@ -180,7 +182,6 @@
     </div>
 
     <script src="main.js"></script>
-    <!-- PDF.js renderer (must be type="module") -->
     <script type="module" src="lesson_material.js"></script>
 </body>
 </html>
