@@ -89,7 +89,7 @@
 .nav-btn:disabled { 
     background-color: #6c757d; 
     cursor: not-allowed; 
-  }
+}
 
 .page-counter {
     font-size: 16px;
@@ -121,18 +121,58 @@
 }
 
 /*========================================
-  RESPONSIVE DESIGN
+    RESPONSIVE DESIGN
 ========================================*/
-@media (min-width: 1024px){
-  .pdf-toolbar{
-      justify-content: space-around;
-  }
 
-  #desktop-title, #desktop-search{
-      display: flex;
-  }
+/* TABLET STYLES (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .pdf-toolbar {
+        justify-content: space-between;
+        padding: 12px 24px;
+        gap: 15px;
+    }
 
-  .lesson-open-title .lesson-material-title-open{
-      font-size: 1.2em;
-  }
+    /* Displays the desktop title on tablets to optimize screen space */
+    #desktop-title {
+        display: flex;
+        align-items: center;
+    }
+
+    .lesson-material-title-open {
+        font-size: 1.1rem;
+    }
+
+    .main-toolbar {
+        gap: 20px;
+    }
+
+    .nav-btn {
+        padding: 10px 22px;
+        font-size: 16px;
+    }
+
+    .pdf-viewport {
+        padding: 30px 20px;
+        min-height: 75vh;
+    }
+
+    /* Limits PDF canvas width on larger tablet screens for better reading proportions */
+    .canvas-wrapper {
+        max-width: 90%;
+    }
+}
+
+/* DESKTOP STYLES (1024px and up) */
+@media (min-width: 1024px) {
+    .pdf-toolbar {
+        justify-content: space-around;
+    }
+
+    #desktop-title, #desktop-search {
+        display: flex;
+    }
+
+    .lesson-open-title .lesson-material-title-open {
+        font-size: 1.2em;
+    }
 }
