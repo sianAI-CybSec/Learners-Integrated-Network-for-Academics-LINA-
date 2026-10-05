@@ -41,3 +41,83 @@
     font-size: 1rem;
     font-family: var(--main-font);
 }
+
+/* Layout & Background Base Setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #525659; /* Matching default dark system PDF backdrops */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Fluid Navigation Control Bar Layout */
+.pdf-toolbar {
+  background-color: #323639;
+  color: #ffffff;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+/* Touch-Screen Target Sized Controls */
+.nav-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-height: 44px; /* Essential touch target size guideline metric */
+}
+
+.nav-btn:hover {
+  background-color: #0056b3;
+}
+
+.nav-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.page-counter {
+  font-size: 16px;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Main Display Viewport Context */
+.pdf-viewport {
+  flex: 1;
+  overflow: auto;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  -webkit-overflow-scrolling: touch; /* Forces momentum touch scroll swipe tracking on iOS Safari devices */
+}
+
+/* Document Page Background Layer */
+.canvas-wrapper {
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  max-width: 100%;
+}
+
+/* Fluid Scale Core Canvas Element Configuration */
+#pdf-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
