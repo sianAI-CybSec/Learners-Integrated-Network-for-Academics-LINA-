@@ -9,8 +9,8 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./pdfjs/pdf.worker.mjs', impor
 ===================================*/
 const LESSONS = {
     java: { file: 'java.pdf',        title: 'Intro to Java Programming' },
-    html: { file: 'html-basics.pdf', title: 'HTML Basics' },
-    css:  { file: 'css-intro.pdf',   title: 'Introduction to CSS' },
+    javascript: { file: 'javascript.pdf', title: 'Intro to WebDev with JavaScript' },
+    python_dsa:  { file: 'python_dsa.pdf',   title: 'Stacks and Queues with Python' },
 };
 
 const lessonKey = new URLSearchParams(window.location.search).get('lesson');

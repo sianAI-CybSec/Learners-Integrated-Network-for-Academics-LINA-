@@ -1350,8 +1350,13 @@ body.dark-theme #burger-icon,
 body.dark-theme #logo-text,
 body.dark-theme .back-img,
 body.dark-theme #back,
+body.dark-theme span,
 body.dark-theme .toggle-btn i {
     filter: brightness(0) invert(0.85); 
+}
+
+body.dark-theme .icon{
+    filter: invert(1) brightness(2);
 }
 
 body.dark-theme input, 

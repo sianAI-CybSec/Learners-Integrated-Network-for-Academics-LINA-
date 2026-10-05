@@ -153,10 +153,25 @@
                     <canvas id="pdf-canvas"></canvas>
                     </div>
                 </div>
-
             </main>
 
-            
+            <section class="popup-section">
+                <div class="modal-overlay" id="rating-modal" hidden>
+                    <div class="rating-card" role="dialog" aria-modal="true" aria-labelledby="rating-title">
+                        <button type="button" class="modal-close" id="rating-close" aria-label="Close">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="15" y1="9" x2="9" y2="15"></line>
+                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                            </svg>
+                        </button>
+                        <h2 id="rating-title">Rate Material</h2>
+                        <div class="star-row" id="star-row" role="radiogroup" aria-label="Rating"></div>
+                        <textarea id="rating-review" placeholder="Enter your review here..."></textarea>
+                        <button type="button" class="rating-submit" id="rating-submit">Submit</button>
+                    </div>
+                </div>
+            </section>
 
             <!-- Mobile / tablet bottom nav -->
             <footer>
