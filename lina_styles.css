@@ -802,6 +802,10 @@ header {
     color: var(--primary-white1);
 }
 
+.recent-card-link:hover .rating .rating-star{
+    filter: invert(1) brightness(2);
+}
+
 /*===============================
   FOOTER HOME NAV
 ===============================*/

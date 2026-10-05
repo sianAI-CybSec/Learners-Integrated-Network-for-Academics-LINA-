@@ -7,7 +7,30 @@
     INTROWEB - FINAL REQUIREMENT - LESSON MATERIAL STYLES
 */
 
-#lesson-material-title-open {
+/* VARIABLES */
+:root {
+    /* PRIMARY COLOR SCHEME */
+    --primary-red1: #C00F0C;
+    --primary-red2: #C43D3D;
+    --primary-white1: #f5f5f5;
+    --primary-white2: #ffffff;
+
+    /* COMPLEMENTARY COLOR SCHEME */
+    --text-black: #000000;
+    --button-black: #1E1E1E;
+    --border-black: #303030;
+
+    /* QUIZZES SECTION */
+    --blue: #29A8CF;
+    --green: #B8E5A8;
+    --pink: #F8A2A1;
+
+    /* FONTS */
+    --main-font: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --logo-font: 'Dongle', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lesson-material-title-open {
     font-size: 1rem;
     font-family: var(--main-font);
 }
@@ -18,19 +41,34 @@
     min-width: 0;
 }
 
+.topbar-desktop{
+  display: none;
+}
+
+#desktop-title, #desktop-search{
+  display: none;
+}
+
 /* Navigation bar */
 .pdf-toolbar {
-    background-color: #323639;
+    background-color: var(--border-black);
     color: #ffffff;
-    padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
     gap: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     position: sticky;
     top: 0;
     z-index: 10;
+}
+
+.main-toolbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
 }
 
 .nav-btn {
@@ -45,8 +83,13 @@
     transition: background-color 0.2s ease;
     min-height: 44px;
 }
-.nav-btn:hover { background-color: var(--primary-red1); }
-.nav-btn:disabled { background-color: #6c757d; cursor: not-allowed; }
+.nav-btn:hover { 
+    background-color: var(--primary-red1); 
+}
+.nav-btn:disabled { 
+    background-color: #6c757d; 
+    cursor: not-allowed; 
+  }
 
 .page-counter {
     font-size: 16px;
@@ -54,7 +97,6 @@
     user-select: none;
 }
 
-/* PDF area: dark backdrop scoped here instead of on <body> */
 .pdf-viewport {
     background-color: #525659;
     min-height: 70vh;
@@ -72,9 +114,25 @@
     max-width: 100%;
 }
 
-/* JS sets the CSS width; max-width keeps it inside small screens */
 #pdf-canvas {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+/*========================================
+  RESPONSIVE DESIGN
+========================================*/
+@media (min-width: 1024px){
+  .pdf-toolbar{
+      justify-content: space-around;
+  }
+
+  #desktop-title, #desktop-search{
+      display: flex;
+  }
+
+  .lesson-open-title .lesson-material-title-open{
+      font-size: 1.2em;
+  }
 }
