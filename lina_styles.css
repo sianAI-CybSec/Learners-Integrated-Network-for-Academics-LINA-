@@ -552,6 +552,18 @@ header {
     width: 35px;
 }
 
+.topbar-mobile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topbar-mobile #back{
+    object-fit: cover;
+    width: 36px;
+}
+
+
 /*===============================
     MAIN FUNCTIONS
 ============================== */
