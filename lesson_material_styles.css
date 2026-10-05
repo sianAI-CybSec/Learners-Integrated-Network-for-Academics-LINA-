@@ -1,0 +1,80 @@
+/*
+    CARANTO, CRISIANE JOSEF A.
+    MANGALIMAN, ROLAIGNE E.
+    VELASCO, AIKEN A.
+
+    CYB 202
+    INTROWEB - FINAL REQUIREMENT - LESSON MATERIAL STYLES
+*/
+
+#lesson-material-title-open {
+    font-size: 1rem;
+    font-family: var(--main-font);
+}
+
+.lesson-open-main {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Navigation bar */
+.pdf-toolbar {
+    background-color: #323639;
+    color: #ffffff;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-btn {
+    background-color: var(--primary-red2);
+    color: #ffffff;
+    border: none;
+    padding: 8px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-height: 44px;
+}
+.nav-btn:hover { background-color: var(--primary-red1); }
+.nav-btn:disabled { background-color: #6c757d; cursor: not-allowed; }
+
+.page-counter {
+    font-size: 16px;
+    font-weight: 500;
+    user-select: none;
+}
+
+/* PDF area: dark backdrop scoped here instead of on <body> */
+.pdf-viewport {
+    background-color: #525659;
+    min-height: 70vh;
+    overflow: auto;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    -webkit-overflow-scrolling: touch;
+}
+
+.canvas-wrapper {
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    max-width: 100%;
+}
+
+/* JS sets the CSS width; max-width keeps it inside small screens */
+#pdf-canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
