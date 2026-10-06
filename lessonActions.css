@@ -1,0 +1,200 @@
+/*
+    CARANTO, CRISIANE JOSEF A.
+    MANGALIMAN, ROLAIGNE E.
+    VELASCO, AIKEN A.
+ 
+    CYB 202
+    INTROWEB - FINAL REQUIREMENT - CSS FOR SAVE / RATE / NOTE
+*/
+ 
+.lesson-actions {
+    display: none;
+    gap: 10px;
+    padding: 12px 16px;
+    background-color: var(--primary-white2);
+    border-bottom: 1px solid var(--border-black);
+}
+ 
+.lesson-action-btn {
+    flex: 1;
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-red1);
+    color: #ffffff;
+    font-family: var(--main-font);
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+ 
+.lesson-action-btn:hover {
+    background-color: var(--primary-red2);
+}
+ 
+@media (min-width: 1024px) {
+    .lesson-actions { display: flex; }
+}
+ 
+.la-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+ 
+.la-overlay[hidden] { display: none; }
+ 
+.la-card {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    padding: 22px 20px;
+    background-color: var(--primary-white2);
+    color: var(--text-black);
+    border: 1px solid var(--border-black);
+    border-radius: 7px;
+    text-align: center;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+ 
+.la-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 6px;
+}
+ 
+.la-card p {
+    font-size: 0.8em;
+    margin-bottom: 14px;
+}
+ 
+.la-btn {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: var(--main-font);
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+}
+ 
+.la-btn-red {
+    background-color: var(--primary-red2);
+    border: 1px solid var(--primary-red2);
+    color: #ffffff;
+}
+ 
+.la-btn-red:hover { background-color: var(--primary-red1); }
+ 
+.la-btn-light {
+    background-color: var(--primary-white2);
+    border: 1px solid var(--border-black);
+    color: var(--text-black);
+}
+ 
+.la-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.6em;
+    line-height: 1;
+    cursor: pointer;
+}
+ 
+.la-stars {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 10px 0;
+}
+ 
+.la-star {
+    background: none;
+    border: none;
+    color: var(--border-black);
+    font-size: 1.9em;
+    line-height: 1;
+    cursor: pointer;
+}
+ 
+.la-star.filled { color: var(--primary-red2); }
+ 
+.la-textarea {
+    width: 100%;
+    height: 90px;
+    resize: none;
+    padding: 8px;
+    border: 1px solid var(--border-black);
+    border-radius: 5px;
+    background-color: var(--primary-white2);
+    color: var(--text-black);
+    font-family: var(--main-font);
+    font-size: 0.85em;
+}
+ 
+.la-error {
+    min-height: 1.2em;
+    margin: 6px 0 0;
+    color: var(--primary-red1);
+}
+ 
+.la-notes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--primary-white2);
+    background-image:
+        linear-gradient(rgba(128, 128, 128, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(128, 128, 128, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+    border-left: 1px solid var(--border-black);
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+    color: var(--text-black);
+}
+ 
+.la-notes[hidden] { display: none; }
+ 
+.la-notes h2 {
+    margin-bottom: 8px;
+    padding-right: 30px;
+    font-size: 1.4em;
+}
+ 
+.la-notes p {
+    margin-bottom: 10px;
+    font-size: 0.85em;
+}
+ 
+.la-notes textarea {
+    flex: 1;
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-black);
+    font-family: var(--main-font);
+    font-size: 0.95em;
+}

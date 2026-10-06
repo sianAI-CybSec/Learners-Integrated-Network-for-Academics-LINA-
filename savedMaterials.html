@@ -128,11 +128,118 @@
                 </label>
             </div>
 
-            <!-- MAIN CONTENT -->
+
             <main id="saved-materials-main">
+ 
+                <label class="saved-search-mobile">
+                    <input type="search" class="saved-search-input" placeholder="Search a folder or file here">
+                    <img src="graphics/Search_Icon.svg.webp" alt="" class="search-bar-icon">
+                </label>
+ 
+                <div id="main-view">
+                    <section class="saved-section" id="folders-section">
+                        <h2 class="saved-materials-heading">Folders</h2>
+ 
+                        <button type="button" class="folder-item" id="open-folder">
+                            <img src="graphics/saved_materials.png" alt="" class="folder-icon">
+                            <span class="folder-text">
+                                <span class="folder_title">progsdats</span>
+                                <span class="folder_info">Created: August 28, 2026</span>
+                                <span class="folder_info">1 item</span>
+                            </span>
+                        </button>
+                    </section>
+ 
+                    <section class="saved-section">
+                        <h2 class="saved-materials-heading">Learning Materials</h2>
+ 
+                        <div class="saved-grid" id="materials-grid">
+
+                            <a href="lesson_material_1.html?lesson=progsdats" class="saved-card" data-id="lesson:progsdats" data-always="yes">
+                                <img src="graphics/java_print.jpg" alt="" class="saved-cover saved-cover-wide">
+                                <p class="saved-title">Progsdats and the print statement</p>
+                                <p class="saved-meta">By shining-shimmering</p>
+                                <p class="saved-meta">1st Year - 2nd Semester</p>
+                                <p class="saved-meta">&#9734; 4.9 (60)</p>
+                            </a>
+ 
+                            <a href="lesson_material_1.html?lesson=java" class="saved-card" data-id="lesson:java" hidden>
+                                <img src="graphics/java_print.jpg" alt="" class="saved-cover saved-cover-wide">
+                                <p class="saved-title">Intro to Java Programming</p>
+                                <p class="saved-meta">Lesson</p>
+                            </a>
+ 
+                            <a href="lesson_material_1.html?lesson=javascript" class="saved-card" data-id="lesson:javascript" hidden>
+                                <img src="graphics/js.jpg" alt="" class="saved-cover saved-cover-wide">
+                                <p class="saved-title">Intro to WebDev with JavaScript</p>
+                                <p class="saved-meta">Lesson</p>
+                            </a>
+ 
+                            <a href="lesson_material_1.html?lesson=python_dsa" class="saved-card" data-id="lesson:python_dsa" hidden>
+                                <img src="graphics/stack_and__queues.webp" alt="" class="saved-cover saved-cover-wide">
+                                <p class="saved-title">Stacks and Queues with Python</p>
+                                <p class="saved-meta">Lesson</p>
+                            </a>
+ 
+                            <a href="https://pages.cs.wisc.edu/~ace/media/gray-hat-hacking.pdf" class="saved-card" data-id="book:Grey Hat Hacking" target="_blank" rel="noopener noreferrer" hidden>
+                                <img src="graphics/greyHatHacking.png" alt="" class="saved-cover saved-cover-book">
+                                <p class="saved-title">Grey Hat Hacking</p>
+                                <p class="saved-meta">By Harper et al. (2011)</p>
+                                <p class="saved-meta">Cybersecurity</p>
+                            </a>
+ 
+                            <a href="https://cdn.bookey.app/files/pdf/book/en/real-world-bug-hunting.pdf" class="saved-card" data-id="book:Real-World Bug Hunting" target="_blank" rel="noopener noreferrer" hidden>
+                                <img src="graphics/bugHunting.png" alt="" class="saved-cover saved-cover-book">
+                                <p class="saved-title">Real-World Bug Hunting</p>
+                                <p class="saved-meta">By Yaworkski, P. (2019)</p>
+                                <p class="saved-meta">Cybersecurity</p>
+                            </a>
+ 
+                            <a href="https://e-library.kpefk.com.ua/wp-content/uploads/2023/09/cybersecurity-for-dummies.pdf" class="saved-card" data-id="book:Cybersecurity for Dummies" target="_blank" rel="noopener noreferrer" hidden>
+                                <img src="graphics/cybForDummies.png" alt="" class="saved-cover saved-cover-book">
+                                <p class="saved-title">Cybersecurity for Dummies</p>
+                                <p class="saved-meta">By Steinberg, J. (2025)</p>
+                                <p class="saved-meta">Cybersecurity</p>
+                            </a>
+ 
+                            <!-- VIDEOS FROM DAILY FEATURED: data-id = "video:" + exact title -->
+                            <a href="https://youtu.be/hzlR0R91lZA?si=WOEuXJnTiyaONGhi" class="saved-card" data-id="video:Do they know that we know that they know?" target="_blank" rel="noopener noreferrer" hidden>
+                                <img src="graphics/aiScheming.jpg" alt="" class="saved-cover saved-cover-wide">
+                                <p class="saved-title">Do they know that we know that they know?</p>
+                                <p class="saved-meta">By Rational Animations</p>
+                                <p class="saved-meta">June 7, 2026</p>
+                            </a>
+ 
+                            <a href="https://youtu.be/fxqcwK5OMag?si=iYlSMscVvb9N_CDT" class="saved-card" data-id="video:The Biggest Hacking Mystery of Our Time: Shadow Broker" target="_blank" rel="noopener noreferrer" hidden>
+                                <img src="graphics/shadowBrokers.jpg" alt="" class="saved-cover saved-cover-wide">
+                                <p class="saved-title">The Biggest Hacking Mystery of Our Time: Shadow Broker</p>
+                                <p class="saved-meta">By Cybernews</p>
+                                <p class="saved-meta">July 4, 2025</p>
+                            </a>
+                        </div>
+ 
+                        <p class="saved-empty" id="saved-empty" hidden>No saved materials found.</p>
+                    </section>
+                </div>
+ 
+                <div id="folder-view" hidden>
+                    <h2 class="saved-materials-heading">
+                        <button type="button" class="folder-back" id="folder-back">Folders</button>
+                        <span class="folder-arrow">&#8250;</span> progsdats
+                    </h2>
+ 
+                    <div class="saved-grid">
+                        <a href="lesson_material_1.html?lesson=progsdats" class="saved-card" data-always="yes">
+                            <img src="graphics/java_comprehensive.png" alt="" class="saved-cover saved-cover-wide">
+                            <p class="saved-title">Comprehensive PROGSDATS</p>
+                            <p class="saved-meta">By CSC-SOC</p>
+                            <p class="saved-meta">1st Year - 2nd Semester</p>
+                            <p class="saved-meta">&#9734; 4.7 (267)</p>
+                        </a>
+                    </div>
+                </div>
             </main>
-                
-            <!-- Mobile / tablet bottom nav -->
+ 
             <footer>
                 <nav class="home-nav">
                     <ul>
@@ -141,7 +248,7 @@
                                 <img src="graphics/home.png" alt="Home" class="icon">
                             </a>
                         </li>
-                        <li> 
+                        <li>
                             <a href="upload_material.html">
                                 <img src="graphics/create.png" alt="Create" class="icon">
                             </a>
@@ -154,9 +261,12 @@
                     </ul>
                 </nav>
             </footer>
-
+ 
+        </div>
         </div>
     </div>
+    <script src="savedMaterials.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
 
