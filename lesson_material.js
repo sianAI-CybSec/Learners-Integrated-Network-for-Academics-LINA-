@@ -29,8 +29,14 @@ const prevBtn = document.getElementById('prev-page');
 const nextBtn = document.getElementById('next-page');
 
 if (lesson) {
-    document.querySelectorAll('.lesson-material-title-open').textContent = lesson.title;
+    document.querySelectorAll('.lesson-material-title-open').forEach(el => {
+        el.textContent = lesson.title;
+    });
     document.title = `${lesson.title} | LINA Lessons`;
+} else {
+    document.querySelectorAll('.lesson-material-title-open').forEach(el => {
+        el.textContent = 'Lesson not found';
+    });
 }
 
 /*==================================
