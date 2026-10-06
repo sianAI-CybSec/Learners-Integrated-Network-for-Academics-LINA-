@@ -11,6 +11,7 @@ const LESSONS = {
     java: { file: 'java.pdf',        title: 'Intro to Java Programming' },
     javascript: { file: 'javascript.pdf', title: 'Intro to WebDev with JavaScript' },
     python_dsa:  { file: 'python_dsa.pdf',   title: 'Stacks and Queues with Python' },
+    progsdats: {file: 'progsdats.pdf', title: 'Progsdats and the print statement'},
 };
 
 const lessonKey = new URLSearchParams(window.location.search).get('lesson');
@@ -28,7 +29,7 @@ const prevBtn = document.getElementById('prev-page');
 const nextBtn = document.getElementById('next-page');
 
 if (lesson) {
-    document.querySelectorAll('.lesson-material-title-open').textContent = lesson.title;
+    document.querySelectorAll('lesson-material-title-open').textContent = lesson.title;
     document.title = `${lesson.title} | LINA Lessons`;
 }
 
