@@ -522,6 +522,7 @@ header {
     border-bottom: 1px solid var(--border-black);
     background-color: var(--primary-white1);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 9999;
 }
 
 .logo, .right-side, #logo-link {
@@ -558,9 +559,16 @@ header {
     align-items: center;
 }
 
-.topbar-mobile #back{
+.topbar-mobile #back-icon, .topbar-mobile #back, .topbar-mobile .back-img{
     object-fit: cover;
     width: 36px;
+}
+
+.mobile-header-title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-left: 1rem;
 }
 
 /*===============================

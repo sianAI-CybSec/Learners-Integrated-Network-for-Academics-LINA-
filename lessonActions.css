@@ -136,7 +136,7 @@
  
 .la-textarea {
     width: 100%;
-    height: 90px;
+    height: 180px;
     resize: none;
     padding: 8px;
     border: 1px solid var(--border-black);
