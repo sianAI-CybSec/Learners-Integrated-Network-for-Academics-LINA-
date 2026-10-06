@@ -1,3 +1,14 @@
+/*
+    <!--
+    CARANTO, CRISIANE JOSEF A.
+    MANGALIMAN, ROLAIGNE E.
+    VELASCO, AIKEN A.
+
+    CYB 202
+    INTROWEB - FINAL REQUIREMENT - JAVASCRIPT FOR DAILY FEATURED
+    -->
+*/
+
 (() => {
     'use strict';
  

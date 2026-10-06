@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LINA - Daily Featured</title>
+    <title>LINA - SAVED MATERIALS</title>
     <!--
     CARANTO, CRISIANE JOSEF A.
     MANGALIMAN, ROLAIGNE E.
@@ -12,24 +12,25 @@
     CYB 202
     INTROWEB - FINAL REQUIREMENT
     -->
-    <link rel="icon" type="image/png" href="graphics/lina_logo.png">
+ <link rel="icon" type="image/png" href="graphics/lina_logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dongle&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="lina_styles.css">
-    <link rel="stylesheet" href= "dailyFeatured.css"> 
+    <link rel="stylesheet" href= "savedMaterials.css"> 
+
 
 </head>
 <body>
-    <div class="daily-featured-page">
+    <div class="saved-materials-page">
         <div class="app-shell">
         <!-- ============================================
              DESKTOP NAVBAR
         ============================================= -->
   <aside class="sidebar">
-            <a href="/home.html" class="sidebar-logo">
+            <a href="home.html" class="sidebar-logo">
                 <img src="graphics/lina_logo.png" alt="LINA Logo" id="logo">
                 <img src="graphics/LINA.png" alt="LINA" id="logo-text">
             </a>
@@ -47,7 +48,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="savedMaterials.html" class="sidebar-link">
+                        <a href="savedMaterials.html" class="sidebar-link active">
                             <img src="graphics/saved_materials.png" class="sidebar-icon" alt="">
                             Saved Materials
                         </a>
@@ -65,7 +66,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="dailyFeatured.html" class="sidebar-link active">
+                        <a href="dailyFeatured.html" class="sidebar-link">
                             <img src="graphics/daily_featured.webp" class="sidebar-icon" alt="">
                             Daily Featured
                         </a>
@@ -83,7 +84,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="sidebar-link">
+                        <a href="notifications.html" class="sidebar-link">
                             <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
                             Notifications
                         </a>
@@ -106,7 +107,7 @@
                     <a href="home.html" id="back-icon">
                         <img src="graphics/back.png" alt="Back" class="back-img">
                     </a>
-                    <h3 class="mobile-header-title">Daily Featured</h3>
+                    <h3 class="mobile-header-title">Saved Materials</h3>
                 </div>
                 <div class="right-side">
                     <div class="search-icon">
@@ -120,7 +121,7 @@
 
             <!-- Desktop-only search bar -->
             <div class="topbar-desktop">
-                <h3 class="desktop-header-title">Daily Featured</h3>
+                <h3 class="desktop-header-title">Saved Materials</h3>
                 <label class="search-bar">
                     <img src="graphics/Search_Icon.svg.webp" alt="" class="search-bar-icon">
                     <input type="search" name="search" placeholder="Search...">
@@ -128,69 +129,7 @@
             </div>
 
             <!-- MAIN CONTENT -->
-            <main id="dailyfeatured-main">
-                
-                <section class="dailyfeatured-section" aria-labelledby="book-discoveires">
-                    <h2 class="dailyfeatured-heading" id="book-discoveires">Book Discoveries</h2>
-                    <p class="dailyfeatured-subheading">Free supplemental books published to help you learn better</p>
-
-                    <div class="book-grid">
-                        <a href="https://pages.cs.wisc.edu/~ace/media/gray-hat-hacking.pdf" class="book-card" target="_blank" rel="noopener noreferrer">
-                            <img src ="graphics/greyHatHacking.png" alt="Grey Hat Hacking book cover" class="book-cover">
-                            <h4 class="book-title">Grey Hat Hacking</h4>
-                            <p class="book-author">By Harper et al. (2011)</p>
-                            <p class="book-category">Cybersecurity</p>
-                            <div class="book-rating">
-                                <i class="fa-regular fa-star"> 4.9 (60)</i>
-                            </div>
-                        </a>
-
-                        <a href="https://cdn.bookey.app/files/pdf/book/en/real-world-bug-hunting.pdf" class="book-card" target="_blank" rel="noopener noreferrer">
-                            <img src ="graphics/bugHunting.png" alt="Real World Bug Hunting book cover" class="book-cover">
-                            <h4 class="book-title">Real-World Bug Hunting</h4>
-                            <p class="book-author">By Yaworkski, P. (2019)</p>
-                            <p class="book-category">Cybersecurity</p>
-                            <div class="book-rating">
-                                <i class="fa-regular fa-star"> 4.7 (123)</i>
-                            </div>
-                        </a>
-
-                        <a href="https://e-library.kpefk.com.ua/wp-content/uploads/2023/09/cybersecurity-for-dummies.pdf" class="book-card" target="_blank" rel="noopener noreferrer">
-                            <img src ="graphics/cybForDummies.png" alt="Cybersecurity for dummies book cover" class="book-cover">
-                            <h4 class="book-title">Cybersecurity for Dummies</h4>
-                            <p class="book-author">By Steinberg, J. (2025)</p>
-                            <p class="book-category">Cybersecurity</p>
-                            <div class="book-rating">
-                                <i class="fa-regular fa-star"> 4.5 (89)</i>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-
-                <section class="dailyfeatured-section" aria-labelledby="video-discoveries">
-                    <h2 class="dailyfeatured-heading" id="video-discoveries">Video Discoveries</h2>
-                    <p class="dailyfeatured-subheading">Free Youtube videos to supplement your learning</p>
-
-                    <div class="video-grid">
-                        <a href="https://youtu.be/hzlR0R91lZA?si=WOEuXJnTiyaONGhi" class="video-card" target="_blank" rel="noopener noreferrer">
-                            <img src="graphics/aiScheming.jpg" alt="Do they know that we know they know?" class="vid-thumbnail">
-                            <h4 class="video-title">Do they know that we know that they know?</h4>
-                            <div class="vide-meta">
-                                <p>By Rational Animations</p>
-                                <p>June 7, 2026</p>
-                            </div>
-                        </a>
-
-                        <a href="https://youtu.be/fxqcwK5OMag?si=iYlSMscVvb9N_CDT" class="video-card" target="_blank" rel="noopener noreferrer">
-                            <img src="graphics/shadowBrokers.jpg" alt="How do you hack a god?" class="vid-thumbnail">
-                            <h4 class="video-title">The Biggest Hacking Mystery of Our Time: Shadow Broker</h4>
-                            <div class="vide-meta">
-                                <p>By Cybernews</p>
-                                <p>July 4, 2025</p>
-                            </div>
-                        </a>
-                    </div>
-                </section>
+            <main id="saved-materials-main">
             </main>
                 
             <!-- Mobile / tablet bottom nav -->
@@ -218,6 +157,7 @@
 
         </div>
     </div>
-    <script src="dailyFeatured.js"></script>
 </body>
 </html>
+
+

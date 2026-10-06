@@ -1,0 +1,130 @@
+/*
+    <!--
+    CARANTO, CRISIANE JOSEF A.
+    MANGALIMAN, ROLAIGNE E.
+    VELASCO, AIKEN A.
+
+    CYB 202
+    INTROWEB - FINAL REQUIREMENT - CSS FOR NOTIFICATIONS
+    -->
+*/
+
+@import url("https://fonts.googleapis.com");
+
+/* VARIABLES */
+:root {
+    --primary-red1: #C00F0C;
+    --primary-red2: #C43D3D;
+    --primary-white1: #f5f5f5;
+    --primary-white2: #ffffff;
+
+    --text-black: #000000;
+    --button-black: #1E1E1E;
+    --border-black: #303030;
+
+    --blue: #29A8CF;
+    --green: #B8E5A8;
+    --pink: #F8A2A1;
+
+    --main-font: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --logo-font: 'Dongle', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notifications-page .mobile-header-title {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.notifications-page #notifications-main {
+    padding: 24px 20px 14vh 20px;
+}
+
+.notifications-page .notifications-section {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    column-gap: 4px;
+    align-items: start;
+}
+
+.notifications-page .notifications-section > i {
+    grid-column: 1;
+    grid-row: span 2;
+    align-self: center;
+    font-size: 1.4em;
+    color: var(--text-black);
+    padding-top: 2px;
+}
+
+.notifications-page .notifications-date {
+    grid-column: 2;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.notifications-page .notifications-info {
+    grid-column: 2;
+    font-size: 0.85em;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 2px 0 0;
+}
+
+.notifications-page .notif-line {
+    grid-column: 1 / -1;
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--border-black);
+    margin: 14px 0;
+}
+
+/* =====================================
+   TABLET: 768px - 1023px
+===================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .notifications-page header,
+    .notifications-page .home-nav {
+        display: none;
+    }
+
+    .notifications-page .topbar-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 32px;
+        padding: 28px 0 16px;
+        border-bottom: 1px solid var(--border-black);
+    }
+
+    .notifications-page .desktop-header-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .notifications-page #notifications-main {
+        padding: 24px 32px 48px 32px;
+    }
+}
+
+/* =====================================
+   DESKTOP: 1024px 
+===================================== */
+@media (min-width: 1024px) {
+    .notifications-page .topbar-desktop {
+        margin: 0 40px;
+        padding: 28px 0 16px;
+        border-bottom: 1px solid var(--border-black);
+    }
+
+    .notifications-page .desktop-header-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .notifications-page #notifications-main {
+        padding: 28px 40px 60px 40px;
+    }
+}
