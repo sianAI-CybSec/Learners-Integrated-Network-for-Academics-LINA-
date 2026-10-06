@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINA - YOUR NOTES</title>
+    <link rel="icon" type="image/png" href="graphics/lina_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dongle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="lina_styles.css">
+    <link rel="stylesheet" href="your_notes.css">
+</head>
+<body>
+    <div class="notes-page-wrapper">
+        <div class="app-shell">
+            <!-- ============================================
+                 DESKTOP NAVBAR
+            ============================================= -->
+            <aside class="sidebar">
+                <a href="home.html" class="sidebar-logo">
+                    <img src="graphics/lina_logo.png" alt="LINA Logo" id="logo">
+                    <img src="graphics/LINA.png" alt="LINA" id="logo-text">
+                </a>
+
+                <a href="" class="sidebar-profile">
+                    <img src="graphics/sample_account_img.jpg" alt="Account">
+                </a>
+
+                <nav class="sidebar-nav sidebar-nav-primary" aria-label="Main">
+                    <ul>
+                        <li>
+                            <a href="home.html" class="sidebar-link">
+                                <img src="graphics/home.png" class="sidebar-icon" alt="">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="savedMaterials.html" class="sidebar-link">
+                                <img src="graphics/saved_materials.png" class="sidebar-icon" alt="">
+                                Saved Materials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="completed_quizzez.html" class="sidebar-link">
+                                <img src="graphics/completed_quiz.webp" class="sidebar-icon" alt="">
+                                Completed Quizzes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="your_notes.html" class="sidebar-link active">
+                                <img src="graphics/notes.png" class="sidebar-icon" alt="">
+                                Your Notes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dailyFeatured.html" class="sidebar-link">
+                                <img src="graphics/daily_featured.webp" class="sidebar-icon" alt="">
+                                Daily Featured
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Account">
+                    <ul>
+                        <li>
+                            <a href="settings.html" class="sidebar-link">
+                                <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.14.36.4.68.73.9.32.23.71.36 1.11.36H21a2 2 0 1 1 0 4h-.09c-.4 0-.79.13-1.11.36-.33.22-.59.54-.73.9z"></path></svg>
+                                Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="notifications.html" class="sidebar-link">
+                                <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                                Notifications
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="upload_material.html" class="sidebar-upload-btn">
+                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    Upload
+                </a>
+            </aside>
+
+            <!-- ============================================
+                 MAIN CONTENT WRAPPER
+            ============================================= -->
+            <div class="main-wrapper">
+                <header>
+                    <div class="topbar-mobile">
+                        <a href="home.html" id="back-icon">
+                            <img src="graphics/back.png" alt="Back" class="back-img">
+                        </a>
+                        <h3 class="mobile-header-title">Your Notes</h3>
+                    </div>
+                    <div class="right-side">
+                        <div class="search-icon">
+                            <a href=""><img src="graphics/Search_Icon.svg.webp" alt="Search" id="search-icon"></a>
+                        </div>
+                        <div class="account-icon">
+                            <a href=""><img src="graphics/sample_account_img.jpg" alt="Account" id="account-dp"></a>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="topbar-desktop">
+                    <div class="desktop-header-filler"><h2 class="notes-page-title notes-topbar-title">My Notes</h2></div>
+                    <label class="search-bar">
+                        <input type="search" name="search" placeholder="Search...">
+                        <img src="graphics/Search_Icon.svg.webp" alt="" class="search-bar-icon">
+                    </label>
+                </div>
+
+                <main id="notes-main-container">
+                    
+                    <!-- MAIN ROOT LIST -->
+                    <div id="view-root">
+                        <h2 class="notes-page-title">My Notes</h2>
+                        <label class="notes-content-search">
+                            <input type="search" placeholder="Search a folder or notes here">
+                            <img src="graphics/Search_Icon.svg.webp" alt="Search" class="search-bar-icon">
+                        </label>
+
+                        <section class="notes-section">
+                            <h3 class="notes-section-title">Folders</h3>
+                            <button type="button" class="notes-list-item" id="btn-open-folder">
+                                <img src="graphics/saved_materials.png" alt="Folder" class="notes-item-icon">
+                                <div class="notes-item-details">
+                                    <span class="notes-item-title">first notes</span>
+                                    <span class="notes-item-meta">Created: August 26, 2026</span>
+                                    <span class="notes-item-meta">1 item</span>
+                                </div>
+                            </button>
+                        </section>
+
+                        <section class="notes-section">
+                            <h3 class="notes-section-title">Notes</h3>
+                            <button type="button" class="notes-list-item btn-open-note">
+                                <img src="graphics/notes.png" alt="Note" class="notes-item-icon">
+                                <div class="notes-item-details">
+                                    <span class="notes-item-title">progsdats print notes</span>
+                                    <span class="notes-item-meta">Created: August 26, 2026</span>
+                                </div>
+                            </button>
+                        </section>
+                    </div>
+
+                    <!-- INSIDE A FOLDER -->
+                    <div id="view-folder" hidden>
+                        <h2 class="notes-page-title">
+                            <button type="button" class="btn-back-nav" id="btn-back-to-root">&#8249; first notes</button>
+                        </h2>
+                        <label class="notes-content-search">
+                            <input type="search" placeholder="Search a folder or notes here">
+                            <img src="graphics/Search_Icon.svg.webp" alt="Search" class="search-bar-icon">
+                        </label>
+                        
+                        <h3 class="notes-breadcrumb">Folders &rsaquo; first notes</h3>
+                        <section class="notes-section">
+                            <button type="button" class="notes-list-item btn-open-note">
+                                <img src="graphics/notes.png" alt="Note" class="notes-item-icon">
+                                <div class="notes-item-details">
+                                    <span class="notes-item-title">progsdats print notes</span>
+                                    <span class="notes-item-meta">Created: August 26, 2026</span>
+                                </div>
+                            </button>
+                        </section>
+                    </div>
+
+                    <!-- NOTE EDITOR (-->
+                    <div id="view-editor" hidden>
+                        <section class="notes-panel-inline" aria-labelledby="notes-heading">
+                            <div class="notes-header">
+                                <h2 id="notes-heading">New Notes</h2>
+                                <button type="button" class="notes-close" id="btn-close-editor" aria-label="Close notes">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <p class="notes-description">LINA automatically saves new notes in Your Notes when made inside a learning material.</p>
+                            
+                            <div class="notes-context">
+                                <p class="notes-lesson-title" id="notes-lesson-title">Progsdats and the print statement</p>
+                                <span class="notes-page-label" id="notes-page-label">Page 1</span>
+                            </div>
+                            
+                            <label class="visually-hidden" for="notes-editor">Note content</label>
+                            <textarea id="notes-editor" class="notes-editor" placeholder="Write your notes here..." maxlength="5000"></textarea>
+                            
+                            <div class="notes-footer">
+                                <span id="notes-character-count">0 / 5000</span>
+                                <button type="button" id="save-notes" class="save-notes-button">Save Notes</button>
+                            </div>
+                            <p id="notes-message" class="notes-message" role="status" aria-live="polite"></p>
+                        </section>
+                    </div>
+
+                </main>
+
+                <footer>
+                    <nav class="home-nav">
+                        <ul>
+                            <li><a href="home.html"><img src="graphics/home.png" alt="Home" class="icon"></a></li>
+                            <li><a href="upload_material.html"><img src="graphics/create.png" alt="Create" class="icon"></a></li>
+                            <li><a href="notifications.html"><img src="graphics/notif.png" alt="Notification" class="icon"></a></li>
+                        </ul>
+                    </nav>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="your_notes.js"></script>
+</body>
+</html>
