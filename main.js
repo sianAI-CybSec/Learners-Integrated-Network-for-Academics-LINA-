@@ -10,6 +10,7 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
+    applySavedTheme(); // Check and apply dark mode on every page load
     setupLogin();
     setupSignup();
 });
@@ -47,7 +48,13 @@ function setupLogin() {
                 localStorage.setItem('linaUsername', displayName);
 
                 alert("Login successfully! Welcome back, " + displayName + ".");
-                window.location.href = "home.html";
+                
+                // Trigger page transition animation
+                if (window.triggerPageTransition) {
+                    window.triggerPageTransition('home.html');
+                } else {
+                    window.location.href = "home.html";
+                }
             }
             else {
                 alert("LOGIN FAILED: Invalid username/email or password. Please try again.");
@@ -65,7 +72,7 @@ function setupLogin() {
             icon.classList.toggle('fa-eye-slash', !willShow);
 
             const label = willShow ? 'Hide password' : 'Show password';
-          togglePassBtn.setAttribute('aria-label', label);
+            togglePassBtn.setAttribute('aria-label', label);
             togglePassBtn.setAttribute('title', label);
         });
     }
@@ -73,7 +80,11 @@ function setupLogin() {
     if (googleBtn) {
         googleBtn.addEventListener('click', () => {
             localStorage.setItem('linaUsername', validUser);
-            window.location.href = 'home.html';
+            if (window.triggerPageTransition) {
+                window.triggerPageTransition('home.html');
+            } else {
+                window.location.href = 'home.html';
+            }
         });
     }
 
@@ -94,7 +105,11 @@ function setupLogin() {
                 return;
             }
             localStorage.setItem('linaUsername', validUser);
-            window.location.href = 'home.html';
+            if (window.triggerPageTransition) {
+                window.triggerPageTransition('home.html');
+            } else {
+                window.location.href = 'home.html';
+            }
         });
     }
 
@@ -169,19 +184,19 @@ function setupSignup() {
             localStorage.setItem('linaUsername', username.value.trim());
 
             alert("Account created successfully! Welcome, " + username.value.trim() + ".");
-            window.location.href = "home.html";
+            
+            // Trigger page transition animation
+            if (window.triggerPageTransition) {
+                window.triggerPageTransition('home.html');
+            } else {
+                window.location.href = "home.html";
+            }
         });
     }
 
 /* ============================================
     Dark Mode
 ============================================= */
-document.addEventListener('DOMContentLoaded', () => {
-    applySavedTheme(); // Check and apply dark mode on every page load
-    setupLogin();
-    setupSignup();
-});
-
 /**
  * Checks localStorage and applies the dark theme if saved as enabled.
  */

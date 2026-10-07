@@ -1005,6 +1005,59 @@ body.dark-theme {
     
 }
 
+/* =========================================
+   PAGE TRANSITION OVERLAY
+========================================= */
+#page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-white1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#page-transition-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.transition-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transition-logo {
+    width: 90px;
+    margin-bottom: 12px;
+}
+
+.transition-title {
+    font-family: var(--logo-font);
+    font-size: 4em;
+    font-weight: 600;
+    color: var(--text-black);
+    margin: 0;
+    line-height: 0.8;
+}
+
+.transition-motto {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--primary-red2);
+    margin-top: 8px;
+}
+
 /* ============================================================
    RESPONSIVE MEDIA QUERIES
    ============================================================ */

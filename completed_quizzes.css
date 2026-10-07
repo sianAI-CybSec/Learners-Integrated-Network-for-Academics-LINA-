@@ -220,13 +220,18 @@
     font-family: monospace; 
 }
  
- 
+/* State Highlight Classes */
 .validated-correct-option {
     background-color: #C1E1C1; 
 }
- 
 .validated-correct-option input[type="radio"] {
-    
+    accent-color: var(--primary-red1);
+}
+
+.validated-wrong-option {
+    background-color: #F8A2A1;
+}
+.validated-wrong-option input[type="radio"] {
     accent-color: var(--primary-red1);
 }
  
@@ -293,11 +298,9 @@
     outline-offset: 2px;
 }
  
- 
 /* =========================================
    RESPONSIVE QUERIES
 ========================================= */
- 
 @media (min-width: 768px) and (max-width: 1023px) {
     .main-wrapper header,
     .main-wrapper .home-nav {
