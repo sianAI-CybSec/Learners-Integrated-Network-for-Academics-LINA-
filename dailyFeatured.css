@@ -354,7 +354,7 @@ body {
     
     .daily-featured-page .search-bar input {
         border: none;
-        backgsround: transparent;
+        background: transparent;
         outline: none;
         width: 100%;
         font-family: var(--main-font);
