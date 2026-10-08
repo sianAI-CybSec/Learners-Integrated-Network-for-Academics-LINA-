@@ -1052,9 +1052,9 @@ body.dark-theme {
 }
 
 .transition-motto {
-    font-size: 1.2em;
-    font-weight: 500;
-    color: var(--primary-red2);
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--text-black);
     margin-top: 8px;
 }
 

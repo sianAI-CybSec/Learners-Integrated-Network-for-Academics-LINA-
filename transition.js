@@ -4,8 +4,7 @@ window.triggerPageTransition = function(targetUrl) {
     overlay.innerHTML = `
         <div class="transition-content">
             <img src="graphics/lina_logo.png" alt="LINA Logo" class="transition-logo">
-            <h1 class="transition-title">LINA</h1>
-            <p class="transition-motto">Towards Better Learning</p>
+            <strong><p class="transition-motto">Towards Better Learning</p><strong>
         </div>
     `;
     document.body.appendChild(overlay);
