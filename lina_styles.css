@@ -1406,6 +1406,7 @@ body.dark-theme {
     --primary-white2: #1E1E1E;
     --text-black: #EAEAEA;
     --border-black: #2C2C2C;
+    --border-light: rgba(255, 255, 255, 0.1);
     --button-black: #2D2D2D;
 }
 
@@ -1415,7 +1416,6 @@ body.dark-theme #burger-icon,
 body.dark-theme #logo-text,
 body.dark-theme .back-img,
 body.dark-theme #back,
-body.dark-theme span,
 body.dark-theme .toggle-btn i {
     filter: brightness(0) invert(0.85); 
 }
