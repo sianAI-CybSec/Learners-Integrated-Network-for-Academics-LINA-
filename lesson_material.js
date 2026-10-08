@@ -16,7 +16,7 @@ const LESSONS = {
     calculus: {file: 'calculus.pdf', title: 'Basic Differential Calculus'},
     cfun: {file: 'cfund.pdf', title: 'Notes on fundamentals of computing'},
     dmaths: {file: 'dmaths.pdf', title: 'Fundamental Discrete Mathematics'},
-    icyber: {file: 'icyber.pdf', title: 'Intro to Cybersecurity Concepts'},
+    icyber: {file: 'icyber.pdf', title: 'Intro to Cybersecurity Essentials'},
     logprog: {file: 'logprog.pdf', title: 'Programming Logic and Intro to Python'},
     oop: {file: 'oop.pdf', title: 'OOP Concepts continued'},
     sts: {file: 'sts.pdf', title: 'science, tech, and society finals'},
