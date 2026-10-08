@@ -101,6 +101,9 @@
 .score-pass {
     color: #4CAF50; 
 }
+.pass-not-perfect{
+    color: var(--blue);
+}
 .score-fail {
     color: var(--primary-red2); 
 }

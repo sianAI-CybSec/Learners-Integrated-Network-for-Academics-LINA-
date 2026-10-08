@@ -12,6 +12,14 @@ const LESSONS = {
     javascript: { file: 'javascript.pdf', title: 'Intro to WebDev with JavaScript' },
     python_dsa:  { file: 'python_dsa.pdf',   title: 'Stacks and Queues with Python' },
     progsdats: {file: 'progsdats.pdf', title: 'Progsdats and the print statement'},
+    anageom: {file: 'anageom.pdf', title: 'The Conic Sections'},
+    calculus: {file: 'calculus.pdf', title: 'Basic Differential Calculus'},
+    cfun: {file: 'cfund.pdf', title: 'Notes on fundamentals of computing'},
+    dmaths: {file: 'dmaths.pdf', title: 'Fundamental Discrete Mathematics'},
+    icyber: {file: 'icyber.pdf', title: 'Intro to Cybersecurity Concepts'},
+    logprog: {file: 'logprog.pdf', title: 'Programming Logic and Intro to Python'},
+    oop: {file: 'oop.pdf', title: 'OOP Concepts continued'},
+    sts: {file: 'sts.pdf', title: 'science, tech, and society finals'},
 };
 
 const lessonKey = new URLSearchParams(window.location.search).get('lesson');
