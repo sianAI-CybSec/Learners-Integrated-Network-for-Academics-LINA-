@@ -1248,7 +1248,7 @@ body.dark-theme {
         box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
 
-    #upload-line, #home-line{
+    #upload-line, #home-line, #search-line{
         margin: 16px 38px 0;
     }
 

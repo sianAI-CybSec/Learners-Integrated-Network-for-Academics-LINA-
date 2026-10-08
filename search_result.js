@@ -15,7 +15,9 @@
     const KNOWN_KEYWORDS = [
         'java',
         'python',
-        'calculus'
+        'calculus',
+        'cryptography',
+        'networking'
     ];
  
     // "Java Script!" -> "java_script"
@@ -69,6 +71,11 @@
  
         const input = document.querySelector('input[type="search"][name="search"]');
         if (input) input.value = query;
+
+        const noResults = document.querySelector('.no-search-results');
+        if (noResults) {
+            noResults.textContent = 'No results found for "' + query + '".';
+        }
     }
  
     document.addEventListener('DOMContentLoaded', function () {

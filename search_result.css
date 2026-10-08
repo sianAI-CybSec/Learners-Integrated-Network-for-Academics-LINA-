@@ -90,6 +90,16 @@ a {
     height: 5vh;
 }
 
+.no-search-results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh auto;
+    font-size: 1.7em;
+    font-family: var(--main-font);
+    font-weight: 500;
+}
+
 @media (min-width: 1024px){
     .search-discover, #search-bar{
         display: none;

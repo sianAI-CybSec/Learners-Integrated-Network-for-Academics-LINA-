@@ -20,6 +20,7 @@ const LESSONS = {
     logprog: {file: 'logprog.pdf', title: 'Programming Logic and Intro to Python'},
     oop: {file: 'oop.pdf', title: 'OOP Concepts continued'},
     sts: {file: 'sts.pdf', title: 'science, tech, and society finals'},
+    cryptography: {file: 'crypto.pdf', title: 'Cryptography Introduction and Basics'}
 };
 
 const lessonKey = new URLSearchParams(window.location.search).get('lesson');
