@@ -1151,13 +1151,78 @@ body.dark-theme {
     }
 
     /* ---- Header ---- */
-    header {
-        gap: 8vw;
-        padding: 20px 24px 12px;
+
+    .home-nav a img.icon {
+        object-fit: cover;
+        width: 48px;
+        height: auto;
     }
 
     .topbar-mobile{
         display: flex;
+    }
+
+    header {
+        min-height: 7vh;
+        gap: 8vw;
+        padding: 20px 24px 12px;
+    }
+
+    .logo, .right-side, #logo-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .right-side{
+        gap: 15px;
+    }
+
+    #logo-text {
+        width: 7vw;
+    }
+
+    #logo, #burger-icon {
+        object-fit: cover;
+        width: 5vw;
+    }
+
+    #logo-link{
+        position: fixed;
+        top: 4vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .account-icon #account-dp {
+        object-fit: cover;
+        border-radius: 50%;
+        width: 5vw;
+        border: 1px solid var(--border-black);
+    }
+
+    #search-icon {
+        object-fit: cover;
+        width: 5vw;
+    }
+
+    .topbar-mobile{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .topbar-mobile #back-icon, .topbar-mobile #back, .topbar-mobile .back-img{
+        object-fit: cover;
+        width: 36px;
+    }
+
+    .mobile-header-title{
+        font-size: 1.7rem !important;
+        font-weight: 600 !important;
+        color: var(--text-black) !important;
+        margin-left: 1rem !important;
     }
 
     /* ---- Main functions: 3-column grid instead of wrapping flex ---- */
