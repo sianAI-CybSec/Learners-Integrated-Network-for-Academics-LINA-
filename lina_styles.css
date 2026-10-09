@@ -1306,6 +1306,7 @@ body.dark-theme {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        min-width: 200px;
         width: 250px;
         flex-shrink: 0;
         position: sticky;
@@ -1314,6 +1315,7 @@ body.dark-theme {
         padding: 24px 16px;
         background-color: var(--primary-white2);
         border-right: 1px solid var(--border-black);
+        overflow-y: auto;
     }
 
     .sidebar-logo img#logo {
