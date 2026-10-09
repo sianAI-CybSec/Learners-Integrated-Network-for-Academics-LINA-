@@ -427,6 +427,8 @@ function initQuiz(quizDataArray, mode = 'review') {
     
     document.getElementById('quiz-dashboard-view').classList.add('hidden');
     document.getElementById('quiz-review-view').classList.remove('hidden');
+    const searchBar = document.querySelector('.internal-search-container');
+    if (searchBar) searchBar.classList.add('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -531,6 +533,8 @@ function prevQuestion() {
 function closeReview() {
     document.getElementById('quiz-review-view').classList.add('hidden');
     document.getElementById('quiz-dashboard-view').classList.remove('hidden');
+    const searchBar = document.querySelector('.internal-search-container');
+    if (searchBar) searchBar.classList.remove('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 

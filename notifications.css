@@ -21,6 +21,7 @@
     --text-black: #000000;
     --button-black: #1E1E1E;
     --border-black: #303030;
+    --border-light: rgba(0, 0, 0, 0.1);
 
     --blue: #29A8CF;
     --green: #B8E5A8;
@@ -37,14 +38,17 @@
 }
 
 .notifications-page #notifications-main {
-    padding: 24px 20px 14vh 20px;
+    padding: 16px 16px 10vh 16px;
 }
 
 .notifications-page .notifications-section {
     display: grid;
-    grid-template-columns: 32px 1fr;
-    column-gap: 4px;
+    grid-template-columns: 36px 1fr;
+    column-gap: 12px;
     align-items: start;
+    padding: 4px 0;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
 }
 
 .notifications-page .notifications-section > i {
@@ -52,31 +56,32 @@
     grid-row: span 2;
     align-self: center;
     font-size: 1.4em;
-    color: var(--text-black);
+    color: var(--primary-red2);
     padding-top: 2px;
 }
 
 .notifications-page .notifications-date {
     grid-column: 2;
-    font-size: 1.2em;
-    font-weight: 500;
+    font-size: 1.1em;
+    font-weight: 600;
     margin: 0;
 }
 
 .notifications-page .notifications-info {
     grid-column: 2;
     font-size: 0.85em;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6;
     margin: 2px 0 0;
+    opacity: 0.75;
 }
 
 .notifications-page .notif-line {
     grid-column: 1 / -1;
     width: 100%;
     border: none;
-    border-top: 1px solid var(--border-black);
-    margin: 14px 0;
+    border-top: 1px solid var(--border-light);
+    margin: 12px 0;
 }
 
 /* =====================================
