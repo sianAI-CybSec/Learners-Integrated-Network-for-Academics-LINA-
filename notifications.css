@@ -88,6 +88,7 @@
    TABLET: 768px - 1023px
 ===================================== */
 @media (min-width: 768px) and (max-width: 1023px) {
+    /*
     .notifications-page header,
     .notifications-page .home-nav {
         display: none;
@@ -106,7 +107,7 @@
         font-size: 1.8rem;
         font-weight: 700;
         margin: 0;
-    }
+    }*/
 
     .notifications-page #notifications-main {
         padding: 24px 32px 48px 32px;

@@ -1156,6 +1156,10 @@ body.dark-theme {
         padding: 20px 24px 12px;
     }
 
+    .topbar-mobile{
+        display: flex;
+    }
+
     /* ---- Main functions: 3-column grid instead of wrapping flex ---- */
     .main-functions {
         padding: 16px 20px;

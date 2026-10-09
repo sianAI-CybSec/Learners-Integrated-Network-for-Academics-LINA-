@@ -26,6 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 /* 
    NOTE FOR GLOBAL INTEGRATION: 
    To make dark mode persist across all LINA pages (Home, Quizzes, etc.), 
-   copy lines 10-15 of this script into your global `main.js` file inside 
+   copy lines 10-15 of this script into global `main.js` file inside 
    its `DOMContentLoaded` block. 
 */

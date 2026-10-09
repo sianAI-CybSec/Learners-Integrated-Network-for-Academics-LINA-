@@ -314,20 +314,6 @@
    RESPONSIVE QUERIES
 ========================================= */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .main-wrapper header,
-    .main-wrapper .home-nav {
-        display: none;
-    }
-    
-    .main-wrapper .topbar-desktop {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 32px;
-        padding: 28px 0 16px; /* Matched tablet topbar padding */
-        border-bottom: 1px solid var(--border-black);
-    }
- 
     #quizzes-main {
         padding: 24px 32px 48px 32px; /* Matched tablet main padding */
     }

@@ -279,6 +279,7 @@
  
 /* Responsive Overrides */
 @media (min-width: 768px) {
+    /*
     .notes-page-wrapper header,
     .notes-page-wrapper .home-nav {
         display: none;
@@ -292,6 +293,7 @@
         padding: 28px 0 16px;
         border-bottom: 1px solid var(--border-black);
     }
+        */
  
     #notes-main-container {
         padding: 24px 32px 48px 32px;
