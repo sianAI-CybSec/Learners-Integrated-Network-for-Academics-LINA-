@@ -422,6 +422,32 @@ legend {
     color: var(--primary-red2);
 }
 
+.landing-options .btn {
+    display: inline-block;
+    padding: 10px 24px;
+    font-family: var(--main-font);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    transition: opacity 0.2s ease;
+}
+
+.landing-options .btn-login {
+    background-color: var(--button-black);
+    color: var(--primary-white2);
+}
+
+.landing-options .btn-signup {
+    background-color: var(--primary-red1);
+    color: var(--primary-white2);
+}
+
+.landing-options .btn:hover {
+    opacity: 0.85;
+}
+
 /*=====================================
   STARTING PAGE
 =====================================*/
@@ -1102,8 +1128,10 @@ body.dark-theme {
 /* ----------------- TABLET: 768px and up ----------------- */
 @media (min-width: 768px) {
     .get-started-card {
+        width: 100%;
         max-width: 420px;
-        padding: 34px 30px;
+        margin: auto;
+        box-sizing: border-box;
     }
 
     .get-started-logo {
@@ -1117,6 +1145,16 @@ body.dark-theme {
     .signup-card {
         max-width: 400px;
         padding: 28px  24px;
+    }
+
+    body:has(.get-started-card),
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
     }
 
     /* ---- Landing page ---- */
