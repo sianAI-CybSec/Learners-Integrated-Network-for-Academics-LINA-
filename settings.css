@@ -166,6 +166,8 @@ input:checked + .slider:before {
 @media (min-width: 1024px) {
     .main-wrapper .topbar-desktop {
         margin: 0 40px;
+        padding: 28px 0 16px;
+        border-bottom: 1px solid var(--border-black);
     }
 
     .settings-container {

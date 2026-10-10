@@ -313,6 +313,14 @@
 @media (min-width: 1024px) {
     .notes-page-wrapper .topbar-desktop {
         margin: 0 40px;
+        padding: 28px 0 16px;
+        border-bottom: 1px solid var(--border-black);
+    }
+
+    .notes-page-wrapper .notes-topbar-title {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 700;
     }
  
     #notes-main-container {
