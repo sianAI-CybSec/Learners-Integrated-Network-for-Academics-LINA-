@@ -448,6 +448,26 @@ legend {
     opacity: 0.85;
 }
 
+.landing-options .btn-quickstart,
+a.btn-quickstart {
+    display: inline-block;
+    padding: 10px 24px;
+    font-family: var(--main-font);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    background-color: var(--primary-red1); /* Or var(--button-black) depending on preference */
+    color: var(--primary-white2);
+    transition: opacity 0.2s ease;
+}
+
+.landing-options .btn-quickstart:hover,
+a.btn-quickstart:hover {
+    opacity: 0.85;
+}
+
 /*=====================================
   STARTING PAGE
 =====================================*/
