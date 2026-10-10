@@ -422,18 +422,21 @@ legend {
     color: var(--primary-red2);
 }
 
-.landing-options .btn {
+.landing-options .btn,
+.landing-options .btn-quickstart,
+a.btn-quickstart {
     display: inline-block;
-    padding: 10px 24px;
+    padding: 8px 16px;     
     font-family: var(--main-font);
-    font-size: 15px;
+    font-size: 13px;        
     font-weight: 500;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 4px;
     text-align: center;
     transition: opacity 0.2s ease;
 }
 
+/* Button Colors */
 .landing-options .btn-login {
     background-color: var(--button-black);
     color: var(--primary-white2);
@@ -444,25 +447,13 @@ legend {
     color: var(--primary-white2);
 }
 
-.landing-options .btn:hover {
-    opacity: 0.85;
-}
-
 .landing-options .btn-quickstart,
 a.btn-quickstart {
-    display: inline-block;
-    padding: 10px 24px;
-    font-family: var(--main-font);
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 6px;
-    text-align: center;
-    background-color: var(--primary-red1); /* Or var(--button-black) depending on preference */
-    color: var(--primary-white2);
-    transition: opacity 0.2s ease;
+    background-color: #ffffff; 
+    color: #111111;           
 }
 
+.landing-options .btn:hover,
 .landing-options .btn-quickstart:hover,
 a.btn-quickstart:hover {
     opacity: 0.85;
@@ -1390,6 +1381,19 @@ body.dark-theme {
 
     .social-btn {
         font-size: 0.95em;
+    }
+
+    .landing-options .btn,
+    .landing-options .btn-quickstart,
+    a.btn-quickstart {
+        padding: 10px 24px;  
+        font-size: 15px;     
+    }
+
+    .get-started-card {
+        max-width: 500px;
+        padding: 40px 36px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
 
     /* ---- Landing page ---- */
