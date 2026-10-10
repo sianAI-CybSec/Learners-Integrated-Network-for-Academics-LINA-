@@ -206,9 +206,10 @@
    TABLET: 768px - 1023px
 ===================================== */
 @media (min-width: 768px) and (max-width: 1023px) {
+    /*
     .saved-materials-page header,
     .saved-materials-page .home-nav {
-        display: none;
+        display: flex;
     }
  
     .saved-materials-page .topbar-desktop {
@@ -224,7 +225,7 @@
         font-size: 1.8rem;
         font-weight: 700;
         margin: 0;
-    }
+    } */
  
     .saved-materials-page #saved-materials-main {
         padding: 24px 32px 48px 32px;

@@ -497,6 +497,14 @@ body.modal-open {
         font-size: 1.1rem;
     }
 
+    .lesson-open-title-header{
+        margin-left: 10px;
+    }
+
+    .lesson-open-title-header .lesson-material-title-open{
+        font-size: 1.3rem;
+    }
+
     .main-toolbar {
         gap: 20px;
     }
@@ -535,7 +543,7 @@ body.modal-open {
     }
 
     .lesson-open-title .lesson-material-title-open {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .rating-card h2 { 

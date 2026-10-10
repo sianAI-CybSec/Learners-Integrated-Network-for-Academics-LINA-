@@ -72,7 +72,8 @@ a {
 }
 
 .category-cards-search{
-    min-width: 90vw;
+    width: 80vw;
+    
 }
 
 .search-card-img{

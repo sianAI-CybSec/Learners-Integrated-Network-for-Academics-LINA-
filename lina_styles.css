@@ -422,6 +422,43 @@ legend {
     color: var(--primary-red2);
 }
 
+.landing-options .btn,
+.landing-options .btn-quickstart,
+a.btn-quickstart {
+    display: inline-block;
+    padding: 8px 16px;     
+    font-family: var(--main-font);
+    font-size: 13px;        
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: opacity 0.2s ease;
+}
+
+/* Button Colors */
+.landing-options .btn-login {
+    background-color: var(--button-black);
+    color: var(--primary-white2);
+}
+
+.landing-options .btn-signup {
+    background-color: var(--primary-red1);
+    color: var(--primary-white2);
+}
+
+.landing-options .btn-quickstart,
+a.btn-quickstart {
+    background-color: #ffffff; 
+    color: #111111;           
+}
+
+.landing-options .btn:hover,
+.landing-options .btn-quickstart:hover,
+a.btn-quickstart:hover {
+    opacity: 0.85;
+}
+
 /*=====================================
   STARTING PAGE
 =====================================*/
@@ -1102,8 +1139,10 @@ body.dark-theme {
 /* ----------------- TABLET: 768px and up ----------------- */
 @media (min-width: 768px) {
     .get-started-card {
+        width: 100%;
         max-width: 420px;
-        padding: 34px 30px;
+        margin: auto;
+        box-sizing: border-box;
     }
 
     .get-started-logo {
@@ -1117,6 +1156,16 @@ body.dark-theme {
     .signup-card {
         max-width: 400px;
         padding: 28px  24px;
+    }
+
+    body:has(.get-started-card),
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
     }
 
     /* ---- Landing page ---- */
@@ -1151,9 +1200,78 @@ body.dark-theme {
     }
 
     /* ---- Header ---- */
+
+    .home-nav a img.icon {
+        object-fit: cover;
+        width: 48px;
+        height: auto;
+    }
+
+    .topbar-mobile{
+        display: flex;
+    }
+
     header {
+        min-height: 7vh;
         gap: 8vw;
         padding: 20px 24px 12px;
+    }
+
+    .logo, .right-side, #logo-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .right-side{
+        gap: 15px;
+    }
+
+    #logo-text {
+        width: 7vw;
+    }
+
+    #logo, #burger-icon {
+        object-fit: cover;
+        width: 5vw;
+    }
+
+    #logo-link{
+        position: fixed;
+        top: 4vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .account-icon #account-dp {
+        object-fit: cover;
+        border-radius: 50%;
+        width: 5vw;
+        border: 1px solid var(--border-black);
+    }
+
+    #search-icon {
+        object-fit: cover;
+        width: 5vw;
+    }
+
+    .topbar-mobile{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .topbar-mobile #back-icon, .topbar-mobile #back, .topbar-mobile .back-img{
+        object-fit: cover;
+        width: 36px;
+    }
+
+    .mobile-header-title{
+        font-size: 1.7rem !important;
+        font-weight: 600 !important;
+        color: var(--text-black) !important;
+        margin-left: 1rem !important;
     }
 
     /* ---- Main functions: 3-column grid instead of wrapping flex ---- */
@@ -1265,6 +1383,19 @@ body.dark-theme {
         font-size: 0.95em;
     }
 
+    .landing-options .btn,
+    .landing-options .btn-quickstart,
+    a.btn-quickstart {
+        padding: 10px 24px;  
+        font-size: 15px;     
+    }
+
+    .get-started-card {
+        max-width: 500px;
+        padding: 40px 36px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
     /* ---- Landing page ---- */
     #start-link {
         display: flex;
@@ -1306,6 +1437,7 @@ body.dark-theme {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        min-width: 200px;
         width: 250px;
         flex-shrink: 0;
         position: sticky;
@@ -1314,6 +1446,7 @@ body.dark-theme {
         padding: 24px 16px;
         background-color: var(--primary-white2);
         border-right: 1px solid var(--border-black);
+        overflow-y: auto;
     }
 
     .sidebar-logo img#logo {
